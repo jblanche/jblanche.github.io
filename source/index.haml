@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+---
+.blog
+  - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
+    %article{:class => "#{post.categories.first}-article"}
+      %p{:class => "#{post.categories.first}-post"}
+        = post.categories.first
+      %a{:rel => "bookmark"}
+        %abbr{:title => "December"}= 'Dec'
+        = post.date.day
+        %sup
+          th
+        %abbr{:title => 2009}= "'09"
+        %time= post.date
+
+      - case post.categories.first
+      - when 'blogpost'
+        %h1= link_to(post.title, post.url, {:class=>"title"})
+        = preserve rp(post.content)
+      -when 'twitter'
+        = preserve rp(post.content)
+      -when 'delicious'
+        %h1= post.title
+        = preserve rp(post.content)        
+      %ul.tags
+        - post.tags.each do |tag|
+          %li= tag
+
+.footer
+  %a(href="/archives.html" title="archives") &laquo; Blog Archives 

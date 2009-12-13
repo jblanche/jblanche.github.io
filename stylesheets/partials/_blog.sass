@@ -1,0 +1,63 @@
+.blog
+  article
+    +box-shadow(#000, 8px)
+    padding= 12px !base_font_size * 1.5 35px !base_font_size * 1.5 
+    position: relative
+    background: rgba(230, 230, 230, 0.6)
+    margin-bottom= !base_font_size * 1.5 
+    display: block
+    width: 850px
+    min-height: 85px    
+    p.delicious-post, p.twitter-post, p.blogpost-post
+      +heading-font
+      width: 191px
+      height: 52px
+      padding: 3px 0 0 0
+      position: absolute
+      right: -17px
+      top: 10px
+      line-height: 50px
+      text-indent: 60px
+      text-transform: uppercase
+      color: #FFF
+      img
+        position: absolute
+        top: 8px
+        left: 30px
+    p.delicious-post
+      background: url('/images/delicious_tab.png') no-repeat
+    p.twitter-post
+      background: url('/images/twitter_tab.png') no-repeat
+    p.blogpost-post
+      background: url('/images/blogpost_tab.png') no-repeat
+    ul.tags
+      text-align: right
+      margin: 0
+      position: absolute
+      bottom: 2px
+      right: 2px
+      li
+        display: inline-block
+        padding: 0 10px
+        background: #BBB
+        margin: 3px
+        font-size= !base_font_size * 0.7
+        +border-top-left-radius(10px)
+        +border-top-right-radius(10px)
+        +border-bottom-left-radius(10px)
+        +border-bottom-right-radius(0)
+    h1
+      font-size: 24px
+      color: #444
+  .delicious-article:hover
+    +box-shadow(#36C, 8px)
+  .twitter-article:hover
+    +box-shadow(#6D6, 8px)
+  .blogpost-article:hover
+    +box-shadow(#C33, 8px)
+  .twitter-article
+    a+p
+      padding-top: 40px
+  footer
+    padding-top= !base_font_size
+    

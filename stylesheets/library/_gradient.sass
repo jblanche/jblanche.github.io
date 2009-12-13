@@ -1,0 +1,29 @@
+=gradient(!type, !start, !end, !color_start, !color_end, !color_stop = false)
+  !coords = "#{!start}, #{!end}"
+  !gradient= "#{!coords}, from(#{!color_start}), to(#{!color_end})"
+  @if !color_stop
+    !gradient= !gradient + ", " + !color_stop
+  background: -webkit-gradient(#{!type}, #{!gradient})
+  background: -moz-#{!type}-gradient(#{!gradient})
+
+=linear-gradient(!start, !end, !color1, !color2, !color_stop = false)
+  +gradient("linear", !start, !end, !color1, !color2, !color_stop)
+
+//*
+  Creates a vertical linear gradient.
+  Usage examples:
+    //yields a gradient starting at the top with #fff, ending in #aaa
+    +v-gradient(#fff, #aaa)
+    //yields same as above but with a #ccc at the halfway point
+    +v-gradient(#fff, #aaa, "50%, #ccc")
+    //yields same as first example but with a #ccc at the 30% from the top, and #bbb at 70% from the top
+    +v-gradient(#fff, #aaa, "30%, #ccc, 70%, #bbb")
+
+=v-gradient(!color1, !color2, !color_stop = false)
+  +linear-gradient("left top", "left bottom", !color1, !color2, !color_stop)
+
+//*
+  Same as v-gradient, but the gradient is horizontal spanning from left to right
+
+=h-gradient(!color1, !color2, !color_stop = false)
+  +linear-gradient("left top", "right top", !color1, !color2, !color_stop)

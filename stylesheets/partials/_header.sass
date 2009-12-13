@@ -1,0 +1,23 @@
+!header_height= 80px
+
+header
+  position: fixed
+  +heading-font
+  left: 0
+  right: 0
+  top: 0
+  z-index: 10
+  display: block
+  background: rgba(50,50,50,0.8)
+  height= !header_height
+  div
+    width: 1000px
+    position: relative
+    margin: 0 auto
+    a.title
+      font-size= !h1
+      line-height= !header_height
+      +heading-font
+      +btn-text-shadow(#FFF)
+      color= !title_color
+      text-decoration: none
