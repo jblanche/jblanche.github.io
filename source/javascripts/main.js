@@ -46,7 +46,7 @@ function initiateWebSockets() {
   });
 
   Jaml.register('twitter-status', function(tweet) {
-    a({href: 'http://twitter.com' + tweet.user.screen_name + '/statuses/' + tweet.id  },
+    a({href: 'http://twitter.com/' + tweet.user.screen_name + '/statuses/' + tweet.id  },
       tweet.text
     );
   });
