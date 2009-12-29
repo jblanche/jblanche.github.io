@@ -22,7 +22,7 @@ function initiateWebSockets() {
   
   WebSocket.__swfLocation = "WebSocketMain.swf";
   
-  var webSocket = new WebSocket('ws://localhost:8080/tweetnode');
+  var webSocket = new WebSocket('ws://jblanche.fr:8080/tweetnode');
 
   webSocket.onopen = function(event){
     webSocket.send('start');
