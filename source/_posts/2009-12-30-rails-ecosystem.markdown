@@ -13,7 +13,7 @@ Learning Rails, I learned about so much thing about the Web itself, server admin
 
 Let's make a quick tour of that : 
 
-The first thing I discovered with Rails was the [MVC architectural pattern](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), like many (if not all) things I gonna talk about in this blog post, I could have learn it in another way, and I can use it outside of Rails (and believe me, I will), but the fact is I needed Rails at this moment to discover the MVC pattern.[[1](#1)]
+The first thing I discovered with Rails was the [MVC architectural pattern](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), like many (if not all) things I gonna talk about in this blog post, I could have learn it in another way, and I can use it outside of Rails (and believe me, I will), but the fact is I needed Rails at this moment to discover the MVC pattern.[1]
 
 Well since MVC is good for writing web applications, let's take it part by part and see what I learnt for each one. 
 
