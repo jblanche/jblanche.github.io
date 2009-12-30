@@ -1,7 +1,0 @@
----
-categories: ['twitter']
-layout: default
-tags: ['css', 'rss', 'example']
----
-
-RT @truc This is a twitter example post.. 
