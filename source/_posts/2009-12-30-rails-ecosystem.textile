@@ -33,7 +33,7 @@ Is there anything interesting aside from the DB related stuff in rails ?
 
 The answer is YES ! For sure : 
 
-Rails made me a "HTTP":http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol fan. What but wait, HTTP is just a protocol, in PHP you get $_GET an $_POST, what would you like more ? 
+Rails made me a "HTTP":http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol fan. What but wait, HTTP is just a protocol, in PHP you get @$_GET@ an @$_POST@, what would you like more ? 
 Well, with Rails, I discovered the "REST software architecture":http://fr.wikipedia.org/wiki/Representational_State_Transfer.
 I discovered there was not 2 HTTP actions but 8 ! Yes 8 ! 
 OK Rails may not use all of them, but the RESTful hype made me understand a lot of thing about the HTTP protocol itself, and made my code a lot cleaner than before.
@@ -75,6 +75,6 @@ p(anchors).
 
 p(photo-credits). Photo Credits :    
 "Model":http://www.flickr.com/photos/bukutgirl/206733063/
-"Controller":(http://www.flickr.com/photos/thisisbossi/3908526414/
+"Controller":http://www.flickr.com/photos/thisisbossi/3908526414/
 "View":http://www.flickr.com/photos/cmbellman/2431552939/
 "Server":http://www.flickr.com/photos/ronniegarcia/89655720/

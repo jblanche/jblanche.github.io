@@ -8,13 +8,27 @@
     display: block
     width: 850px
     min-height: 85px  
-    img
-      display: block
-      float: none
-      margin: 0 auto
-      +box-shadow(#000, 8px)
-    img:hover
-      +box-shadow(#000, 12px)      
+    a[href^="#result"]
+      font-size: 0.8em
+    a[href^="#result"], a[href^="#anchor"]
+      font-weight: normal
+      vertical-align: super
+    p
+      img
+        display: block
+        float: none
+        margin: 0 auto
+        +box-shadow(#000, 8px)
+      img:hover
+        +box-shadow(#000, 12px)      
+    p.anchors, p.photo-credits
+      font-size: 0.8em
+    p.photo-credits
+      padding: 10px
+      margin: 10px
+      line-height: 1.3em
+      background: rgba(30,30,30,0.1)
+      border: 1px solid #FFF
     p.delicious-post, p.twitter-post, p.blogpost-post
       +heading-font
       width: 191px
