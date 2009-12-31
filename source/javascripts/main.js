@@ -20,7 +20,7 @@ function aboutPage(){
 
 function initiateWebSockets() {
   
-  WebSocket.__swfLocation = "WebSocketMain.swf";
+  WebSocket.__swfLocation = "/WebSocketMain.swf";
   
   var webSocket = new WebSocket('ws://jblanche.fr:8080/tweetnode');
 
