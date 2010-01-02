@@ -1,21 +1,50 @@
 $(document).ready(function(){
-    initiateWebSockets();
-    aboutPage();
+  initiateWebSockets();
+  aboutPage();
 });
 
 
 function aboutPage(){
-  if($('#about').size == 0 ){
-    return false ;
-  }
-  else{
-    // hide every p that's not the first of his section.
-  }
-  
-  //add behavior to show this content when the main section is clicked
-  
-  
-  
+  $('.navigation').each(function () {
+    var $links = $(this).find('a'),
+      panelIds = $links.map(function() { return this.hash; }).get().join(","),
+      $panels = $(panelIds),
+      $panelwrapper = $panels.filter(':first').parent(),
+      delay = 500,
+      heightOffset = 0; // we could add margin-top + margin-bottom + padding-top + padding-bottom of $panelwrapper
+    
+    $panels.hide();
+    
+    $links.click(function () {
+      var link = this, 
+        $link = $(this);
+    
+      // ignore if already visible
+      if ($link.parent().is('.selected')) {
+        return false;
+      }
+    
+      $links.parent().removeClass('selected');
+      $link.parent().addClass('selected');
+    
+      document.title = 'Jblanche.fr - ' + $link.text();
+    
+      if ($.support.opacity) {
+        $panels.stop().animate({opacity: 0 }, delay);
+      }
+    
+      $panelwrapper.stop().animate({
+        height: 0
+      }, delay, function () {
+        var height = $panels.hide().filter(link.hash).css('opacity', 1).show().height() + heightOffset;
+    
+        $panelwrapper.animate({
+          height: height
+        }, delay);
+      });
+    });
+    $links.filter(window.location.hash ? '[hash=' + window.location.hash + ']' : ':first').click();
+  });
 }
 
 function initiateWebSockets() {

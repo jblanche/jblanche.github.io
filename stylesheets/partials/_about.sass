@@ -1,22 +1,48 @@
 section#about
   +box-shadow(#000, 8px)
-  padding= 12px !base_font_size * 1.5 35px !base_font_size * 1.5 
   position: relative
   background: rgba(230, 230, 230, 0.6)
   margin-bottom= !base_font_size * 1.5 
   display: block
-  width: 850px
   min-height: 85px    
-
-  .ruby, .html-css, .architect
+  
+  nav
+    position: relative
+    li
+      width: 332px
+      text-align: center
+      padding: 0
+      color: #000
+      border-right: none
+      border-left: 1px solid #CCC
+      border-bottom: 1px solid #CCC
+  #developper, #webdesigner, #architect
     display: block
     padding: 10px
-
-  .ruby
-    background: #C33
-    
-  .html-css
-    background: #6D6
-    
-  .architect
-    background: #36C
+  .selected
+    background-color: rgba(50, 50, 50, 0.7)
+    border-color: #686868
+    width: 333px
+    a
+      color: #E6E6E6
+      &:hover
+        text-shadow: #444 2px 2px
+  
+a[href="#developper"], a[href="#webdesigner"], a[href="#architect"]
+  display: block
+  height: 100%
+  width: 100%
+  padding: 0
+  margin: 0
+  line-height: 80px
+  text-indent: 65px
+  color: #686868
+  font-family: "QuicksandBook", "Helvetica Neue", Helvetica, Arial, sans-serif
+  &:hover
+    text-shadow: #CCC 2px 2px
+a[href="#developper"]  
+  background: url('/images/developper.png') no-repeat 50px 12px
+a[href="#webdesigner"]  
+  background: url('/images/webdesigner.png') no-repeat 50px 12px
+a[href="#architect"]  
+  background: url('/images/architect.png') no-repeat 50px 12px
