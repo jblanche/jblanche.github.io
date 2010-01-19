@@ -1,0 +1,14 @@
+---
+title: DailyNews_#1
+layout: default
+categories: ['delicious']
+---
+
+"Facebook offline":http://modelix.net/2009/09/facebook-connect-working-with-offline-users-data-access/ - Use facebook offline_access with facebooker
+"lovely-layouts":http://github.com/justinfrench/lovely-layouts - Some usefull helper for your rails layouts
+"Rails 3 Templates":https://gist.github.com/280196/5c075f4a3d3a4118d1d706fce07e40572a3873c7 - A great set of templates for Rails3
+"jQuery Easing Plugin":http://gsgd.co.uk/sandbox/jquery/easing/ - Looks like a very cool Jquery easing plugin !
+"Rails 3 generators":http://blog.plataformatec.com.br/2010/01/discovering-rails-3-generators/ - Great blogpost about the new rails generators to come in Rails3. This is awesome !
+"Dynamic CSS":http://wiseheartdesign.com/articles/2010/01/18/the-demise-of-css-why-sass-and-languages-like-it-will-triumph/ - Good article explaining the benefits of using tools like SASS in place of plain CSS in your projects.
+"MondoDB ressources":http://code-fu.pl/2010/01/17/rails-mongodb-resources.html - How to use MongoDB, one of the new NoSQL hype technology, with Rails.
+"Capistrano Recipe Book":http://openmonkey.com/articles/2010/01/making-your-capistrano-recipe-book - make your own gem to standardize Capistrano deployments
