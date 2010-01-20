@@ -30,7 +30,7 @@ body_id: home
     %script{:type => "text/javascript", :src  => "/javascripts/jquery.gritter.min.js"}
     %script{:type => "text/javascript", :src  => "/javascripts/swfobject.js"}
     %script{:type => "text/javascript", :src  => "/javascripts/FABridge.js"}
-    %script{:type => "text/javascript", :src  => "/javascripts/web_socket.js"}
+    /%script{:type => "text/javascript", :src  => "/javascripts/web_socket.js"}
     %script{:type => "text/javascript", :src  => "/javascripts/jaml-all.js"}
     %script{:type => "text/javascript", :src  => "/javascripts/main.js"}
   %body(id="#{(page.respond_to?(:body_id) ? page.body_id : nil)}")
@@ -64,11 +64,10 @@ body_id: home
               %p{:class => "#{page.categories.first}-post"}
                 = page.categories.first
               %a{:rel => "bookmark"}
-                %abbr{:title => "December"}= 'Dec'
+                %abbr{:title => Date::MONTHNAMES[page.date.month]}= Date::ABBR_MONTHNAMES[page.date.month]
                 = page.date.day
-                %sup
-                  th
-                %abbr{:title => 2009}= "'09"
+                %sup= ordinalize(page.date.day)
+                %abbr{:title => page.date.year}= "'#{page.date.year - 2000}"
                 %time= page.date
                 
               = preserve rp(content)

@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  initiateWebSockets();
+  //Temporarely disable Websockets since I'm not happy with them right now
+  //initiateWebSockets();
   aboutPage();
 });
 

@@ -159,5 +159,19 @@ module Helpers
   def style_amp(input)
     input.gsub(" & "," <span class='amp'>&</span> ")
   end
+  
+  def ordinalize(number)
+    if (11..13).include?(number.to_i % 100)
+      "th"
+    else
+      case number.to_i % 10
+        when 1; "st"
+        when 2; "nd"
+        when 3; "rd"
+        else    "th"
+      end
+    end
+  end
+  
 end
 
