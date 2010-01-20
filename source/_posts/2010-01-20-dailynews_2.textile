@@ -1,0 +1,21 @@
+---
+title: DailyNews_#2
+layout: default
+categories: ['delicious']
+---
+
+Some Git related stuff :
+"Git for the real world":http://robey.lag.net/2008/07/13/git-for-the-real-world.html - Some useful tips for a better use of Git
+"More real-world git":http://robey.lag.net/2009/11/29/more-git.html - Even more tips for a perfect use of Git
+"Successful Git branching":http://nvie.com/archives/323 - Description of a successful development model using Git
+
+Some Browsers and Javascript :
+"Germany is switching browsers":http://blog.mozilla.com/metrics/2010/01/19/people-in-germany-are-switching-browsers/ - The warning issued by a German security agency convince people to switch
+"Firebug is 1.5.0":http://blog.getfirebug.com/2010/01/15/firebug-1-5-0/ - Get the brand new version of Firebug with a ton of improvements
+"JavaScript grid editor":http://roberto.open-lab.com/2010/01/18/javascript-grid-editor-i-want-to-be-excel/ - Great review of 'want to be' Excel plugins for HTML tables.
+"jQuery Lint":http://james.padolsey.com/javascript/jquery-lint/ - A library to get rid of incorrect usage of Jquery, this will make your JS code even prettier !
+
+And a small bag of links :
+"low-fidelity prototyping":http://andrewchenblog.com/2009/09/15/why-every-consumer-internet-startup-should-do-more-low-fidelity-prototyping/ - Why low-fidelity prototyping kicks butt for customer-driven design
+"Code Blocks":http://blog.rubybestpractices.com/posts/gregory/009-beautiful-blocks.html - Great Review of blocks usage in Ruby
+"rock-n-code":http://github.com/rock-n-code/sinatra-pages - Easily render static pages with Sinatra
