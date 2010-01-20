@@ -65,9 +65,9 @@ body_id: home
                 = page.categories.first
               %a{:rel => "bookmark"}
                 %abbr{:title => Date::MONTHNAMES[page.date.month]}= Date::ABBR_MONTHNAMES[page.date.month]
-                = page.date.day
+                = "%.2d" % page.date.day
                 %sup= ordinalize(page.date.day)
-                %abbr{:title => page.date.year}= "'#{page.date.year - 2000}"
+                %abbr{:title => page.date.year}= "'" + ("%.2d" % (page.date.year.to_i-2000))
                 %time= page.date
                 
               = preserve rp(content)

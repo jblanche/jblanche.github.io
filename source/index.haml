@@ -9,9 +9,9 @@ title: Blog
         = post.categories.first
       %a{:rel => "bookmark"}
         %abbr{:title => Date::MONTHNAMES[post.date.month]}= Date::ABBR_MONTHNAMES[post.date.month]
-        = post.date.day
+        = "%.2d" % post.date.day
         %sup= ordinalize(post.date.day)
-        %abbr{:title => post.date.year}= "'#{post.date.year - 2000}"
+        %abbr{:title => post.date.year}= "'" + ("%.2d" % (post.date.year.to_i-2000))
         %time= post.date
 
       - case post.categories.first
