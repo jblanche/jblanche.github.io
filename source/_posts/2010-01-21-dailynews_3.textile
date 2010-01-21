@@ -4,10 +4,10 @@ layout: default
 categories: ['delicious']
 ---
 
-Small day today :
+Small day today, but the 2 first links are realy great news : 
 
 "Firefox 3.6 is out":https://developer.mozilla.org/En/Firefox_3.6_for_developers - Check out the cool new stuff you should use (CSS gradients, Woff, JavaScript file APIs...)
 "REE 1.8.7-2010.01":http://blog.phusion.nl/2010/01/20/ruby-enterprise-edition-1-8-7-2010-01-released/ - Phusion guys just release the new version of their Ruby interpreter
 "BumpTop Mac":http://bumptop.com/mac/ - You might want to try this, It's kinda fun.
-"configure block - GIANT ROBOTS SMASHING INTO OTHER GIANT ROBOTS":http://robots.thoughtbot.com/post/344833329/mygem-configure-block - Another great use of Ruby blocks
+"configure block":http://robots.thoughtbot.com/post/344833329/mygem-configure-block - Another great use of Ruby blocks
 "Rails 3 Migration":http://rails3.community-tracker.com/permalinks/5/notes-from-the-field-upgrading-to-rails-3 - Some stuff you should know if you plan to migrate some of your Rails app
