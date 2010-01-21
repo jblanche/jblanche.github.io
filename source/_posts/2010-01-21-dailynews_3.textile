@@ -4,7 +4,7 @@ layout: default
 categories: ['delicious']
 ---
 
-Small day Today :
+Small day today :
 
 "Firefox 3.6 is out":https://developer.mozilla.org/En/Firefox_3.6_for_developers - Check out the cool new stuff you should use (CSS gradients, Woff, JavaScript file APIs...)
 "REE 1.8.7-2010.01":http://blog.phusion.nl/2010/01/20/ruby-enterprise-edition-1-8-7-2010-01-released/ - Phusion guys just release the new version of their Ruby interpreter
