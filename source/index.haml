@@ -21,7 +21,7 @@ title: Blog
       -when 'twitter'
         = preserve rp(post.content)
       -when 'delicious'
-        %h1= post.title
+        %h1= link_to(post.title, post.url, {:class=>"title"})
         = preserve rp(post.content)        
       %ul.tags
         - post.tags.each do |tag|
