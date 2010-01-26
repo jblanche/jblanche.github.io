@@ -1,0 +1,17 @@
+---
+title: DailyNews_#4
+layout: default
+categories: ['delicious']
+---
+
+Rails 3 first beta is approching :
+
+"New ActionMailer API":http://lindsaar.net/2010/1/26/new-actionmailer-api-in-rails-3 - Why sending email will be painless with Rails3
+"Rspec 2.0":http://blog.davidchelimsky.net/2010/01/25/rspec-20-in-the-works/ - What to expects about Rspec 2.0
+
+The future of the browsers : 
+
+"Elevating JavaScript Performance Through GPU Power":http://mozillalabs.com/jetpack/2010/01/25/elevating-javascript-performance-through-gpu-power/ - The future of Javascript on Firefox
+"The Flash Player's Uncertain Future":http://www.neurofuzzy.net/2010/01/25/the-flash-players-uncertain-future/ - Is Flash dead ?
+"HTML5 video and H.264":http://www.0xdeadbeef.com/weblog/2010/01/html5-video-and-h-264-what-history-tells-us-and-why-were-standing-with-the-web/ - Why Mozilla is right about not implementing H.264 for videos.
+
