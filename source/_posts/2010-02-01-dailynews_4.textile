@@ -1,0 +1,39 @@
+---
+title: DailyNews_#4
+layout: default
+categories: ['delicious']
+---
+
+A lot of stuff after a short holiday week : 
+
+About Rails 3 : 
+
+"Rails 3 Upgrade":http://blog.peepcode.com/tutorials/2010/live-coding-rails-3-upgrade - A free PeepCode screencast to upgrade tour app to Rails3
+"SafeBuffers":http://yehudakatz.com/2010/02/01/safebuffers-and-rails-3-0/ - Rails3 will add XSS protection by default, here is how.
+"Bundler 0.9":http://yehudakatz.com/2010/02/01/bundler-0-9-heading-toward-1-0/ - How Bundler will make dependency resolution so much easier.
+"rails_upgrade":http://omgbloglol.com/post/364624593/rails-upgrade-is-now-an-official-plugin - A plugin that adds a few rake tasks to make the switch to rails3 a lot easier.
+
+
+About the Ipad / Adobe / Google : 
+
+I really don't know what to think about the IPad, I can imagine a lot of people using it (my parents, my sister...), but I hate the store system, and it lacks a Webcam and USB.
+
+"Apple + iPad + Huxley = Orwellian nightmare":http://www.guardian.co.uk/technology/2010/jan/31/ipad-review-comments-naughton - Another story about the Ipad and how apple will try to "trap" us.
+"Thoughts and Observations Regarding the iPad":http://daringfireball.net/2010/01/various_ipad_thoughts - A interesting review of the Ipad
+"Stop crashing my Browser":http://www.bynkii.com/archives/2010/01/stop_crashing_my_browser.html - Another complain about the flash plugin. Again, and again, and again...
+"Jobs about Google and Adobe":http://www.wired.com/epicenter/2010/01/googles-dont-be-evil-mantra-is-bullshit-adobe-is-lazy-apples-steve-jobs/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+wired%2Findex+%28Wired%3A+Index+3+%28Top+Stories+2%29%29&utm_content=Google+Reader - The world is moving to HTML5 ! If Jobs says so...
+
+About browsers : 
+
+"Firefox for Mobile Now Available":http://blog.mozilla.com/blog/2010/01/29/firefox-for-maemo-now-available/ - Firefox mobile is ready for the N900 (Maemo). Give it a try !
+"Multi-Process Plugins for Firefox":http://benjamin.smedbergs.us/blog/2010-01-27/multi-process-plugins-on-by-default/ - Firefox newest nightly builds puts plugins in a separate process. Flash should no longer crash Firefox !
+"Modern browsers for modern applications":http://googleenterprise.blogspot.com/2010/01/modern-browsers-for-modern-applications.html - Google shoot one more bullet in the IE6 chest
+
+The everything else :
+
+"NoSQL Week in Review 9":http://nosql.mypopescu.com/post/363599078/nosql-week-in-review-9 - A good catch up of the NoSQL movement
+"Multiple Backgrounds and CSS Gradients":http://snook.ca/archives/html_and_css/multiple-bg-css-gradients - Combine CSS3 features...
+"Nine Things Developers Want More Than Money":http://www.softwarebyrob.com/2006/10/31/nine-things-developers-want-more-than-money/ - Here is how to make a developer happy !
+"Steps towards building an accessible site":http://scrunchup.com/issue-4/building-accessible-sites-part-1/ - Learn the basics of building accessible websites
+"Facebook rewrites PHP runtime":http://www.sdtimes.com/blog/post/2010/01/30/Facebook-rewrites-PHP-runtime.aspx - Facebook will release a new OpenSource PHP runtime.
+
