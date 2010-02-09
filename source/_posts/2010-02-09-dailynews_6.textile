@@ -1,0 +1,18 @@
+---
+title: DailyNews_#6
+layout: default
+categories: ['delicious']
+---
+
+Some Rails3 links : 
+
+"Rails Plugins":http://railsplugins.org/ - Find out if your plugin is compatible with Rails3
+"Rails 3 Upgrade":http://blog.peepcode.com/tutorials/2010/live-coding-rails-3-upgrade - A free PeepCode screencast to upgrade your app to Rails3
+"The Rails Initialization Process":http://ryanbigg.com/guides/initialization.html - This guide explains how the initialization process in Rails works as of Rails 3.
+
+And some othe stuff : 
+
+"10 Privacy Settings Every Facebook User Should Know":http://www.allfacebook.com/2009/02/facebook-privacy/ - Protect your privacy on Facebook
+"The iPhone obsession":http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html - Why Iphone-only websites is an insane idea.
+"Haml Sucks for Content":http://chriseppstein.github.com/blog/2010/02/08/haml-sucks-for-content/ - When not to use Haml
+"Stomp on Web Sockets":http://jmesnil.net/stomp-websocket/doc/ - Interesting way to combine stomp and websockets.
