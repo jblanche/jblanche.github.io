@@ -68,7 +68,7 @@ body_id: home
                 = "%.2d" % page.date.day
                 %sup= ordinalize(page.date.day)
                 %abbr{:title => page.date.year}= "'" + ("%.2d" % (page.date.year.to_i-2000))
-                %time{:datetime => page.date}= page.date.strftime("%Y-%m-%d")                
+                %time{:datetime => page.date.strftime("%Y-%m-%d")}= page.date.strftime("%Y-%m-%d")                
                 
               = rp(content)
               %ul.tags
