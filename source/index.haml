@@ -12,7 +12,7 @@ title: Blog
         = "%.2d" % post.date.day
         %sup= ordinalize(post.date.day)
         %abbr{:title => post.date.year}= "'" + ("%.2d" % (post.date.year.to_i-2000))
-        %time= post.date
+        %time{:datetime => post.date}= post.date.strftime("%Y-%m-%d")
 
       - case post.categories.first
       - when 'blogpost'
