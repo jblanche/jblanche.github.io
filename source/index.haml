@@ -17,12 +17,12 @@ title: Blog
       - case post.categories.first
       - when 'blogpost'
         %h1= link_to(post.title, post.url, {:class=>"title"})
-        = preserve rp(post.content)
+        = rp(post.content)
       -when 'twitter'
-        = preserve rp(post.content)
+        = rp(post.content)
       -when 'delicious'
         %h1= link_to(post.title, post.url, {:class=>"title"})
-        = preserve rp(post.content)        
+        = rp(post.content)        
       %ul.tags
         - post.tags.each do |tag|
           %li= tag

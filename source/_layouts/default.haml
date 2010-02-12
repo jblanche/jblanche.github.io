@@ -70,7 +70,7 @@ body_id: home
                 %abbr{:title => page.date.year}= "'" + ("%.2d" % (page.date.year.to_i-2000))
                 %time= page.date
                 
-              = preserve rp(content)
+              = rp(content)
               %ul.tags
                 - page.tags.each do |tag|
                   %li= tag
@@ -84,7 +84,7 @@ body_id: home
 
             
         - else
-          = preserve rp(content)
+          = rp(content)
     %footer
       Copyright &copy; #{Time.now.strftime('%Y')} - #{page.blog_title} -
       %span.credit Powered by <a href="http://octopress.org">Octopress</a>
