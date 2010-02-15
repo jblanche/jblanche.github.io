@@ -1,0 +1,15 @@
+---
+title: DailyNews_#7
+layout: default
+categories: ['delicious']
+---
+
+"Javascript Objects":http://www.switchonthecode.com/tutorials/javascript-objects-a-useful-example - An interesting Object Oriented Javascript example.
+"MongoDb is fast":http://www.idiotsabound.com/did-i-mention-mongodb-is-fast-way-to-go-mongo - I realy should try one of these NoSql in a project.
+"REE, nginx and Passenger":http://antoniocangiano.com/2009/11/20/setup-ruby-enterprise-edition-nginx-and-passenger-aka-mod_rails-on-ubuntu/ - Setup Ruby Enterprise Edition, Nginx and Passenger on a server.
+"SublimeVideo":http://blog.jilion.com/2010/02/11/sublimevideo-supports-firefox#comments - A cool video player using HTML5 video support
+"Uniform":http://pixelmatrixdesign.com/uniform/ - Sexy forms with jQuery, not sure I really need this but I'll give it a try.
+"Cardmagic":http://github.com/cardmagic/contacts - A good interface to import email contacts from various providers
+"Clean rails3 environment":http://gist.github.com/296055 - How to set up a clean Rails3 environment on your mac
+"jQuery Quicksand":http://razorjack.net/quicksand/ - Reorder and filter items with a nice shuffling animation.
+
