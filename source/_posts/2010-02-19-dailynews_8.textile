@@ -1,0 +1,16 @@
+---
+title: DailyNews_#8
+layout: default
+categories: ['delicious']
+---
+
+Rails : 
+"Rails 3 Generators":http://www.viget.com/extend/rails-3-generators-the-old-faithful/ - How they work
+"Happy Birthday Devise":http://blog.plataformatec.com.br/2010/02/happy-birthday-devise/ - The best authentication solution for rails gets new features.
+"Rails Metrics":http://blog.plataformatec.com.br/2010/02/rails-metrics-know-what-is-happening-inside-your-rails-3-application/ - Know what is happening inside your Rails 3 application
+
+And everything else : 
+"How to install MongoDB on OS X":http://shiftcommathree.com/articles/how-to-install-mongodb-on-os-x - A quick and well done tutorial.
+"BBC's redesign":http://www.bbc.co.uk/blogs/bbcinternet/2010/02/a_new_global_visual_language_f.html - A great story about the new global visual language for the BBC's digital services
+"MongoTips":http://mongotips.com/ - A great place to follow things about Mongo
+"I Can’t Believe It’s Not Flash!":http://mir.aculo.us/2010/02/19/i-cant-believe-its-not-flash - Slides from Thomas Fuchs presentation at Webstock 2010. I want to see the video !
