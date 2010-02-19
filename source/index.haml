@@ -5,27 +5,28 @@ title: Blog
 .blog
   - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
     %article{:class => "#{post.categories.first}-article"}
-      %p{:class => "#{post.categories.first}-post"}
-        = post.categories.first
+      .article-content
+        %p{:class => "#{post.categories.first}-post"}
+          = post.categories.first
+        - case post.categories.first
+        - when 'blogpost'
+          %h1= link_to(post.title, post.url, {:class=>"title"})
+          = rp(post.content)
+        -when 'twitter'
+          = rp(post.content)
+        -when 'delicious'
+          %h1= link_to(post.title, post.url, {:class=>"title"})
+          = rp(post.content)        
+        %ul.tags
+          - post.tags.each do |tag|
+            %li= tag
+
       %a{:rel => "bookmark"}
         %abbr{:title => Date::MONTHNAMES[post.date.month]}= Date::ABBR_MONTHNAMES[post.date.month]
         = "%.2d" % post.date.day
         %sup= ordinalize(post.date.day)
         %abbr{:title => post.date.year}= "'" + ("%.2d" % (post.date.year.to_i-2000))
         %time{:datetime => post.date.strftime("%Y-%m-%d")}= post.date.strftime("%Y-%m-%d")
-
-      - case post.categories.first
-      - when 'blogpost'
-        %h1= link_to(post.title, post.url, {:class=>"title"})
-        = rp(post.content)
-      -when 'twitter'
-        = rp(post.content)
-      -when 'delicious'
-        %h1= link_to(post.title, post.url, {:class=>"title"})
-        = rp(post.content)        
-      %ul.tags
-        - post.tags.each do |tag|
-          %li= tag
 
 .footer
   %a(href="/archives.html" title="archives") &laquo; Blog Archives 

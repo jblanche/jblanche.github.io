@@ -1,12 +1,15 @@
 .blog
   article
+    position: relative
+    display: block
+  .article-content
     +box-shadow(#000, 8px)
     padding= 12px !base_font_size * 1.5 35px !base_font_size * 1.5 
     position: relative
     background: rgba(230, 230, 230, 0.6)
     margin-bottom= !base_font_size * 1.5 
     display: block
-    width: 850px
+    width: 820px
     min-height: 85px  
     a[href^="#result"]
       font-size: 0.8em
@@ -70,11 +73,11 @@
     h1
       font-size: 24px
       color: #444
-  .delicious-article:hover
+  .delicious-article .article-content:hover
     +box-shadow(#36C, 8px)
-  .twitter-article:hover
+  .twitter-article .article-content:hover
     +box-shadow(#6D6, 8px)
-  .blogpost-article:hover
+  .blogpost-article .article-content:hover
     +box-shadow(#C33, 8px)
   .twitter-article
     a+p

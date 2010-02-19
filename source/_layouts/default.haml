@@ -34,6 +34,9 @@ body_id: home
     /%script{:type => "text/javascript", :src  => "/javascripts/web_socket.js"}
     %script{:type => "text/javascript", :src  => "/javascripts/jaml-all.js"}
     %script{:type => "text/javascript", :src  => "/javascripts/main.js"}
+    /[if lte IE 8]
+      %script{:type => "text/javascript", :src  => "/javascripts/html5.js"}
+
   %body(id="#{(page.respond_to?(:body_id) ? page.body_id : nil)}")
     %header
       %div
@@ -61,28 +64,29 @@ body_id: home
         - if page.respond_to? :date
           .blog
             %article{:class => "#{page.categories.first}-article"}
-              %h1= page.title
-              %p{:class => "#{page.categories.first}-post"}
-                = page.categories.first
+              .article-content
+                %h1= page.title
+                %p{:class => "#{page.categories.first}-post"}
+                  = page.categories.first
+                  
+                = rp(content)
+                %ul.tags
+                  - page.tags.each do |tag|
+                    %li= tag
+                - if page.respond_to? :disqus_short_name
+                  #disqus_thread
+                  :javascript
+                    var disqus_url = "#{page.full_url}#{page.url}";
+                  %noscript
+                    %a(href="http://#{page.disqus_short_name}.disqus.com/?url=ref") View the discussion thread
+                  %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
+                
               %a{:rel => "bookmark"}
                 %abbr{:title => Date::MONTHNAMES[page.date.month]}= Date::ABBR_MONTHNAMES[page.date.month]
                 = "%.2d" % page.date.day
                 %sup= ordinalize(page.date.day)
                 %abbr{:title => page.date.year}= "'" + ("%.2d" % (page.date.year.to_i-2000))
-                %time{:datetime => page.date.strftime("%Y-%m-%d")}= page.date.strftime("%Y-%m-%d")                
-                
-              = rp(content)
-              %ul.tags
-                - page.tags.each do |tag|
-                  %li= tag
-              - if page.respond_to? :disqus_short_name
-                #disqus_thread
-                :javascript
-                  var disqus_url = "#{page.full_url}#{page.url}";
-                %noscript
-                  %a(href="http://#{page.disqus_short_name}.disqus.com/?url=ref") View the discussion thread
-                %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
-
+                %time{:datetime => page.date.strftime("%Y-%m-%d")}= page.date.strftime("%Y-%m-%d")
             
         - else
           = rp(content)
