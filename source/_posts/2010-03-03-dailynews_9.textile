@@ -1,0 +1,25 @@
+---
+title: DailyNews_#9
+layout: default
+categories: ['delicious']
+---
+
+Ruby / Rails
+
+"Rails 3.0 Setup using rvm & Ruby 1.9.2":http://amerine.net/2010/02/24/rvm-rails3-ruby-1-9-2-setup.html - A good way to start working with Rails3 and Ruby 1.9.2
+"jnunemaker's canable":http://github.com/jnunemaker/canable/ - Simple permissions solution for rails
+"Unobtrusive JS in Rails3":http://weblog.jamisbuck.org/2010/3/2/unobtrusive-yet-explicit - Interesting way to handle unobtrusive javascript
+"delorean":http://github.com/bebanjo/delorean - Delorean lets you travel in time with Ruby by mocking Time.now
+"Rapid prototyping with HAML, SASS and Ruby":http://jgn.heroku.com/2010/02/28/rapid-prototyping-with-haml-sass-and-ruby/ - Some thoughts about HAML and SASS
+
+Javascript 
+
+"How To Node":http://howtonode.org/ - Latest news from node.js
+"How NodeJS saved my web application":http://rfw.posterous.com/how-nodejs-saved-my-web-application - Why you should learn NodeJs
+"subtleGradient's":http://github.com/subtleGradient/javascript-tools.tmbundle - Essential Tools for developing Javascript in TextMate — Read more
+
+Other stuff 
+
+"Open letter to Google about video":http://www.fsf.org/blogs/community/google-free-on2-vp8-for-youtube - Free VP8, and use it on YouTube, come on guys, don't be evil ! Let's do that !
+"Life Below 600px":http://iampaddy.com/lifebelow600/ - Repeat after me : Don't mind the fold !
+"Mad Libs Style Form Increases Conversion":http://www.lukew.com/ff/entry.asp?1007 - A new way to style your forms
