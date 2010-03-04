@@ -5,8 +5,8 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
   <title>Jblanche.fr</title>
-  <link href="http://jblanche.fr/atom.xml" rel="self">
-  <link href="http://jblanche.fr">
+  <link href="http://jblanche.fr/atom.xml" rel="self"/>
+  <link href="http://jblanche.fr"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://jblanche.fr</id>
   <author>
