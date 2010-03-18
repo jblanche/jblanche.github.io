@@ -1,0 +1,35 @@
+---
+title: DailyNews_#10
+layout: default
+categories: ['delicious']
+---
+
+It's been a few days without post, but believe me, they were interesting days. 
+A lot of things came thought, I'll have to talk about this in a while! 
+
+Before that let's see what happened during those days: 
+
+I tried to learn about Redis : 
+
+"IntroductionToRedisDataTypes":http://code.google.com/p/redis/wiki/IntroductionToRedisDataTypes - More stuff about Redis
+"Redis: Data Cheeseburgers":http://robots.thoughtbot.com/post/443934722/redis-data-cheeseburgers - Redis made easy by the thoughtbot guys
+
+I read a few ruby related blog posts: 
+
+"Show your objects baby!":http://blog.plataformatec.com.br/2010/03/show-your-objects-baby/ - Plataformatec guys strike again with a library to easily display every attribute of an object.
+"Timing Ruby Code":http://www.skorks.com/2010/03/timing-ruby-code-it-is-easy-with-benchmark/ - Benchmark ruby code
+"Ruby Best Practices":http://blog.rubybestpractices.com/posts/gregory/022-rbp-now-open.html - A free ebook for better ruby code
+
+A few Javascript related ones: 
+
+"Speks for Node.js":http://iamneato.com/2010/01/03/speks-for-node - Rspec derivative for Node.js
+"humbleFinance":http://www.humblesoftware.com/finance/index - Another data visualization Javascript plugin
+"jQuery Masonry":http://desandro.com/resources/jquery-masonry/ - Great Jquery library for hacking CSS floating model
+"harmony at master - GitHub":http://github.com/mynyml/harmony - Javascript testing made easy
+
+And a few others: 
+
+"Setting rather than Resetting Default Styling":http://carsonified.com/blog/design/setting-rather-than-resetting-default-styling/ - Another good start for your stylesheets, I should give it a try!
+"Online Identity Concept Series":https://mozillalabs.com/blog/2010/03/online-identity-concept-series/ - Mozilla enters the online identity discussions.
+"Designing for the Web":http://designingfortheweb.co.uk/book/index.php - Web Design has its own set of rules, here they are...
+
