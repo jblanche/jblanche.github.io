@@ -4,3 +4,4 @@ _config.yml
 config.rb
 */.sass-cache
 .DS_Store
+.sass-cache
