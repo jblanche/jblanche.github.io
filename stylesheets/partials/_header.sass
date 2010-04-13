@@ -1,18 +1,35 @@
-!header_height= 80px
-
 header
   +heading-font
   display: block
-  background: rgba(50,50,50,0.7)
-  height= !header_height
+  padding: 0
+  overflow: hidden
   div
-    width: 960px
+    width= !page_width
     position: relative
-    margin: 0 auto
+    display: block
+    overflow: hidden
+    margin: 30px auto 0 auto
     a.title
-      font-size= !h1
-      line-height= !header_height
-      +heading-font
-      +btn-text-shadow(#FFF)
-      color= !title_color
-      text-decoration: none
+      img
+        float: left
+      h1
+        float: left
+        font-size= !h1
+        height= 100px
+        line-height= 100px
+        padding-left: 10px
+        padding-right: 30px
+        border-right: 2px solid #FFF
+        +heading-font
+        color= !title_color
+        text-decoration: none
+      h1:hover
+        +btn-text-shadow(#FFF)
+    blockquote
+      float: left
+      width: 480px
+      line-height: 28px
+      padding: 17px 10px 0 30px
+      margin-bottom: 0
+      cite
+        display: inline

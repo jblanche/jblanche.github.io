@@ -2,6 +2,7 @@
 !base_font_size_small = 13px
 !base_font_color = #333
 !default_border_radius = 6px
+!base_line_height = 30px
 
 +general-typography
 
@@ -10,22 +11,19 @@
 
 body
   font-size= !base_font_size
+  line-height= !base_line_height
   +serif-font
   
 h1,h2,h3,h4,h5,h6
-  color: #333
+  color= !link_color
   +heading-font
 
 blockquote
   +quote-font
   font-style: italic
-  color: #555
-  background: #f8f8f8
-  border:
-    top: 1px solid #e5e5e5
-    bottom: 1px solid #e5e5e5
+  color: #FFF
   &:before
-    color: #ddd
+    color: #FFF
   cite
     +sans-font
     font-size= !base_font_size - 2px
@@ -38,3 +36,17 @@ blockquote
       color: inherit !important
       &:hover
         color= !link_color !important
+        
+.ampersand
+  +heading-font
+  
+hr
+  height: 120px
+  border: none
+  width: 868px
+  margin: 0
+  clear: both
+  background: url(/images/ampersand.png) no-repeat 50% 50%
+hr:last-child
+  background: none
+  height: 20px  
