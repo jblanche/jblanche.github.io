@@ -1,29 +1,32 @@
 nav
-  margin: 0
+  display: block
+  margin: 0 auto
+  width= !page_width
   padding: 0
   overflow: hidden
-  position: absolute
-  right: 0
-  top: 0
+  clear: both
   color: #DDD
-  height= !header_height
   ul
-    height= !header_height
+    width= 520px
+    background= darken(!body_bg, 30)
+    +border-bottom-radius(7px)
+    display: block
+    overflow: hidden
+    margin: 0 0 0 360px
+    li:last-child
+      border-right: none
     li
-      height= !header_height
       display: block
       float: left
-      width: 150px
-      border-right: 1px dashed #FFF
-      padding-right: 15px
+      padding: 0 12px
       text-align: right
+      border-right= 1px solid darken(!body_bg, 40)
       a
         display: block
-        height: 30px
-        line-height: 30px
-        font-size: 28px
-        margin: 10px 0
+        font-size: 14px
         color: #CCC
-        text-decoration: none
+        //text-decoration: none
       span
         font-family: "QuicksandBookOblique", "Helvetica Neue", Helvetica, Arial, sans-serif
+    li.active a
+      color: #FFF

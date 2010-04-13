@@ -1,14 +1,16 @@
 ---
 layout: default
-title: Blog Archives
+title: Archives
 ---
-%h2 Blog Archives
 
-- posts = site.posts.reverse.group_by { |p| p.date.strftime("%Y") }
-- posts.keys.each do |year|
-  %h3= year
-  %ul
-    - posts[year].each do |post|
-      %li(class="#{(post.data['link'] ? "link" : nil )}")
-        = link_to(post.title, post.url)
-        %span.pubdate= post.date.strftime("%d %b, %Y")
+%section#archives
+  %h2 Archives
+  - posts = site.posts.reverse.group_by { |p| p.date.strftime("%Y-%m") }
+  - posts.keys.each do |month|
+    %h3= month
+    %ul
+      - posts[month].each do |post|
+        %li(class="#{(post.data['link'] ? "link" : nil )}")
+          %span.pubdate= post.date.strftime("%d %b, %Y")
+          = link_to(post.title, post.url)
+          %span.tags= " #{post.tags.map{|t| %(##{t})}.join(', ')}" unless post.tags.blank?

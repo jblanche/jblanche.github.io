@@ -6,7 +6,7 @@ categories: ['delicious']
 
 Ruby / Rails
 
-"Rails 3.0 Setup using rvm & Ruby 1.9.2":http://amerine.net/2010/02/24/rvm-rails3-ruby-1-9-2-setup.html - A good way to start working with Rails3 and Ruby 1.9.2
+"Rails 3.0 Setup using rvm <span class="ampersand">&</span> Ruby 1.9.2":http://amerine.net/2010/02/24/rvm-rails3-ruby-1-9-2-setup.html - A good way to start working with Rails3 and Ruby 1.9.2
 "jnunemaker's canable":http://github.com/jnunemaker/canable/ - Simple permissions solution for rails
 "Unobtrusive JS in Rails3":http://weblog.jamisbuck.org/2010/3/2/unobtrusive-yet-explicit - Interesting way to handle unobtrusive javascript
 "delorean":http://github.com/bebanjo/delorean - Delorean lets you travel in time with Ruby by mocking Time.now

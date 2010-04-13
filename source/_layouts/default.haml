@@ -29,37 +29,35 @@ body_id: home
     %link(href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
     %link(href="/stylesheets/jquery.gritter.css" media="screen, projection" rel="stylesheet" type="text/css")
     %script{:type => "text/javascript", :src  => "/javascripts/jquery-1.3.2.min.js"}
-    %script{:type => "text/javascript", :src  => "/javascripts/jquery.gritter.min.js"}
-    %script{:type => "text/javascript", :src  => "/javascripts/swfobject.js"}
-    %script{:type => "text/javascript", :src  => "/javascripts/FABridge.js"}
-    /%script{:type => "text/javascript", :src  => "/javascripts/web_socket.js"}
-    %script{:type => "text/javascript", :src  => "/javascripts/jaml-all.js"}
     %script{:type => "text/javascript", :src  => "/javascripts/main.js"}
     /[if lte IE 8]
       %script{:type => "text/javascript", :src  => "/javascripts/html5.js"}
 
   %body(id="#{(page.respond_to?(:body_id) ? page.body_id : nil)}")
     %header
+      %nav
+        %ul
+          %li{:class => "#{'active' if page.title == 'Accueil'}"}
+            %a(href="/about.html") Accueil
+          %li{:class => "#{'active' if page.title == 'Blog'}"} 
+            %a(href="/blog.html") Blog
+          %li{:class => "#{'active' if page.title == 'Microblogging'}"} 
+            %a(href="/microblogging") Microblogging
+          %li{:class => "#{'active' if page.title == 'Archives'}"} 
+            %a(href="/archives") Archives
+          %li
+            %a(href="/atom.xml") Subscribe
+          %li{:class => "#{'active' if page.title == 'Contact'}"} 
+            %a(href="/contact") Contact
+
       %div
-        %a.title(href="/")=page.blog_title
-        %nav
-          %ul
-            %li 
-              %a(href="/") Blog
-              %span Is where I write
-            %li 
-              %a(href="/en/about.html") About
-              %span Is personnal
-            %li 
-              %a(href="/atom.xml") Subscribe
-              %span Is for fans
-      
-      - if page.respond_to? :google_custom_search_id
-        #search
-          %form(action="http://www.google.com/cse" id="cse-search-box")
-            %input(type="hidden" name="cx" value="#{page.google_custom_search_id}")
-            %input(type="hidden" name="ie" value="UTF-8")
-            %input#q(type="text" name="q")
+        %a.title(href="/")
+          %img(src="/images/logo_site_big.png")
+          %h1= page.blog_title
+        %blockquote
+          Jblanche.fr est le site d'un freelance concepteur <span class="ampersand">&</span> développeur pour le web passionné par le web en général, les frameworks, l'ergonomie, les logiciels libres... Bienvenue !
+          %cite Jonathan Blanchet
+
     #page
       #main
         - if page.respond_to? :date

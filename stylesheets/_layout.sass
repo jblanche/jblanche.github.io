@@ -8,10 +8,17 @@
 !default_border_radius = 4px
 
 html body
-  background: url('/images/body.gif')
+  background= !body_bg
+  //background: url(/images/grid.png)
   color= !body_color
-  a
+  a:link
     color= !link_color
+  a:visited
+    color= darken(!link_color, 20)
+  a:hover
+    color= lighten(!link_color, 20)
+  a:active
+    color= lighten(!link_color, 50)  
   width: 100%
 
 =page_width
