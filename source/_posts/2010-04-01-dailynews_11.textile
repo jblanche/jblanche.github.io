@@ -1,0 +1,24 @@
+---
+title: DailyNews_#11
+layout: default
+categories: ['delicious']
+---
+
+A lot of Ruby related stuff today : 
+"Another Bundler tutorial":http://lindsaar.net/2010/3/31/bundle_me_some_sanity - How to use Bundler and RVM for more efficiency.
+"Bundler: best way to manage Ruby applications":http://gembundler.com/ - Some doc you should read if you're having issues with Bundler
+"Ruby Shortcuts":http://caiustheory.com/ruby-shortcuts - Usefull shortcuts I always forgot.
+"Ruby Summer of Code":http://rubysoc.org/ - A GSoC for Ruby !
+"On-the-fly image handling":http://blog.new-bamboo.co.uk/2010/1/2/dragonfly - Another way to generate thumbnails in your rails app.
+"Evented Code with Ruby Fibers":http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers - Evented Code made easy thanks to Ruby1.9
+"ubiquo":http://www.ubiquo.me/ - Another Rails CMS
+"The Lowdown on Routes in Rails 3":http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/ - Great blogpost about rails3 routing DSL
+
+HAML/SASS 3 are coming : 
+"FireSass Bridges the Gap Between Sass and Firebug":http://nex-3.com/posts/92-firesass-bridges-the-gap-between-sass-and-firebug - That's really good news !
+"Haml/Sass 3 Beta Released":http://nex-3.com/posts/94-haml-sass-3-beta-released - Writing HTML an the CSS the easy way, is easier than ever...
+
+Everything else : 
+"Typography quick tips":http://csswizardry.com/type-tips/ - Some good things to know about web typography !
+"High Scalability - Justin.tv":http://highscalability.com/blog/2010/3/16/justintvs-live-video-broadcasting-architecture.html - Yes Rails can scale, but you need the right tools next to it !
+"nateware's redis-objects":http://github.com/nateware/redis-objects - Something that could ease the transition to Redis
