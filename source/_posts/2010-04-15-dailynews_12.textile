@@ -1,0 +1,47 @@
+---
+title: 
+layout: default
+categories: ['delicious']
+---
+
+The last post was the last one in english, I'm switching back to french, it's easier and I'll be more motivated to post, moreover I'll be a freelance soon, and I want my client to visit these pages, and to understand it.
+
+En français donc, les news du moment : 
+
+Premièrement ce blog arbore comme vous pouvez le constater un nouveau design, tout n'est pas fini, loin s'en faut mais l'idée est là ! 
+Les tons seront bleus, le logo est adopté (merci Maggy), et tout cela va se remplir au fur et à mesure.
+
+Pour les news de l'internet, c'est tout de suite : 
+
+
+L'écosystème de Rails s'amuse en attendant Rails3 : 
+
+"(english)Rails Dispatch":http://www.railsdispatch.com/ - Comment utiliser Bundler avec Rails3
+"(english)awesome_print":http://github.com/michaeldv/awesome_print - Afficher les objets plus clairement dans IRB.
+"(english)ExceptionHub | JavaScript Error Tracking":http://www.exceptionhub.com/ - Peut être la solution professionnelle pour les tests de javascript.
+"(english)cookiestack: some handy rack-rewrite rules":http://blog.cookiestack.com/post/498473476/some-handy-rack-rewrite-rules - Exemples d'utilisations de rack-rewrite
+"(english)Cucumber, Tags and Continuous Integration":http://blog.josephwilk.net/ruby/cucumber-tags-and-continuous-integration-oh-my.html - Utilisation intéressante des tags de cucumber
+"(english)JavaScript Testing with Cucumber and Capybara":http://openmonkey.com/articles/2010/04/javascript-testing-with-cucumber-capybara - Comment tester le javascript de vos pages
+
+On joue un peu avec HTML5 : 
+
+"(english)Starfield":http://www.chiptune.com/starfield/starfield.html - Une démo sympa en HTML5
+"(english)Ball Pool":http://mrdoob.com/projects/chromeexperiments/ball_pool/ - Et une autre (Say bye bye to Flash...)
+
+Ou avec WebGL : 
+"(english)WebGL – Collada Animation and Skinning":http://twitter.com/paulrouget/status/12103971673 - C'est juste incroyable ! 
+
+On parle design : 
+
+"(english)Know When to Stop Designing":http://www.azarask.in/blog/post/know_when_to_stop_designing_quantitatively/ - Quelques idées intéressantes sur le design en général.
+"(english)CSS generated content techniques":http://dev.opera.com/articles/view/css-generated-content-techniques/ - Quand et comment utiliser la propriété css : 'content'
+"(english)Nivo Slider":http://nivo.dev7studios.com/ - Une gallerie sympa en Jquery
+"(english)Web Safe Font Cheat Sheet":http://www.mightymeta.co.uk/introducing-the-web-safe-font-cheat-sheet/ - Qu'elles polices de caractères et/ou quelles techniques de remplacement utiliser sur le net.
+
+ou Développement : 
+
+"(english)TextMate Bundle Browser":http://netcetera.org/cgi-bin/tmbundles.cgi - une liste de Bundle textmate
+"(english)Prototype 1.7 RC1":http://prototypejs.org/2010/4/5/prototype-1-7-rc1-sizzle-layout-dimensions-api-event-delegation-and-more - Nouvelle version de prototype à venir, mais qui l'utilise encore ?
+"(english)Apple’s secret iPad web framework?":http://almost.done21.com/2010/04/adlib-apples-secret-ipad-web-framework/ - Et si les applications natives pour Ipad n'étaient faites que de HTML + CSS + JS
+"(english)Git Cheat Sheet":http://github.com/guides/git-cheat-sheet - Toujours utile à avoir sous la main.
+"(english)More Web Inspector Updates":http://webkit.org/blog/1091/more-web-inspector-updates/ - L'inspecteur web de Webkit s'améliore encore...
