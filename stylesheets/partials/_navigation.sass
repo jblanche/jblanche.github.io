@@ -18,14 +18,17 @@ nav
     li
       display: block
       float: left
-      padding: 0 12px
+      padding: 0 16px
       text-align: right
-      border-right= 1px solid darken(!body_bg, 40)
+      border-right: 1px solid
+      border-color= darken(!body_bg, 40)
       a
         display: block
         font-size: 14px
-        color: #CCC
+        color: #2FC2EF
         //text-decoration: none
+      a:visited
+        color: #2FC2EF
       span
         font-family: "QuicksandBookOblique", "Helvetica Neue", Helvetica, Arial, sans-serif
     li.active a
