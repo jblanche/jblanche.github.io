@@ -4,7 +4,7 @@ layout: default
 categories: ['delicious']
 ---
 
-The last post was the last one in english, I'm switching back to french, it's easier and I'll be more motivated to post, moreover I'll be a freelance soon, and I want my client to visit these pages, and to understand it.
+The previous post was the last one in english, I'm switching back to french, it's easier and I'll be more motivated to post, moreover I'll be a freelance soon, and I want my clients to visit these pages, and to understand it.
 
 En français donc, les news du moment : 
 
