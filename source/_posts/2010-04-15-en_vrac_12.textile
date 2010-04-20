@@ -4,11 +4,11 @@ layout: default
 categories: ['delicious']
 ---
 
-The previous post was the last one in english, I'm switching back to french, it's easier and I'll be more motivated to post, moreover I'll be a freelance soon, and I want my clients to visit these pages, and to understand it.
+The previous post was the last one in english, I'm switching back to french, it's easier and I'll be more motivated to post, moreover I'll be a freelance soon, and I want my clients to visit these pages, and to understand them.
 
 En français donc, les news du moment : 
 
-Premièrement ce blog arbore comme vous pouvez le constater un nouveau design, tout n'est pas fini, loin s'en faut mais l'idée est là ! 
+Premièrement ce blog arbore comme vous pouvez le constater un nouveau design. Tout n'est pas fini, loin s'en faut mais l'idée est là ! 
 Les tons seront bleus, le logo est adopté (merci Maggy), et tout cela va se remplir au fur et à mesure.
 
 Pour les news de l'internet, c'est tout de suite : 
