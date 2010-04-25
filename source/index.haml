@@ -1,34 +1,92 @@
 ---
 layout: default
-title: Blog
+title: Accueil
 ---
-.blog
-  - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
-    %article{:class => "#{post.categories.first}-article"}
-      .article-content
-        %p{:class => "#{post.categories.first}-post"}
-          = post.categories.first
-        - case post.categories.first
-        - when 'blogpost'
-          %h1= link_to(post.title, post.url, {:class=>"title"})
-          = rp(post.content)
-        -when 'twitter'
-          = rp(post.content)
-        -when 'delicious'
-          %h1= link_to(post.title, post.url, {:class=>"title"})
-          = rp(post.content)        
-        %ul.tags
-          - post.tags.each do |tag|
-            %li= tag
 
-      %a{:rel => "bookmark"}
-        %abbr{:title => Date::MONTHNAMES[post.date.month]}= Date::ABBR_MONTHNAMES[post.date.month]
-        = "%.2d" % post.date.day
-        %sup= ordinalize(post.date.day)
-        %abbr{:title => post.date.year}= "'" + ("%.2d" % (post.date.year.to_i-2000))
-        %time{:datetime => post.date.strftime("%Y-%m-%d")}= post.date.strftime("%Y-%m-%d")
+%section#about
+  %h2 Concepteur <span class="ampersand"> & </span> développeur web freelance
+  .myself
+    %img(src='/images/accueil/jonathan_blanchet.jpg')
+    %p
+      Jblanche.fr est le site d'un <b>passionné du web</b>, jeune mais déjà expérimenté après quatre années passées à développer de nombreux produits à destinations d'une variété de clients.
+      %br
+      Ayant étudié auparavant les techniques de <b>gestion de projet</b> et d'<b>ergonomie</b> du web, j'essaye aujourd'hui d'utiliser tous ces acquis  afin de délivrer des sites et applications web de qualité.
+      %br
+      Mes connaissances allant des techniques de conceptions, au développement web, en passant par l'intégration (<b>HTML</b>/<b>CSS</b>/<b>Javascript</b>), elles me permettront de vous guider sur l'intégralité d'un projet.
+  %hr
+    
+  %ul.competences
+    %li#imagine
+      %img(src="/images/accueil/imagine.jpg")
+      %h3 Imaginer
+      %p
+        Vous êtes à la recherche de quelqu'un pouvant vous guider dans la création d'une nouvelle application web.
+        Définissons ensemble les contours de votre futur projet.
+    %li#design
+      %img(src="/images/accueil/design.jpg")
+      %h3 Concevoir
+      %p
+        Après avoir définis ensemble le cadre du projet, nous étudierons les meilleurs moyen de satisfaire ceux qui deviendront vos clients grâce à différentes techniques de conception de projet bien rodées.
+    %li#develop
+      %img(src="/images/accueil/develop.jpg")
+      %h3 Développer
+      %p
+        Une fois les bases du projet posées, il est tant de passer au développement de celui-ci.
+        C'est là le coeur de mon travail, surement la partie qui me plait le plus, je mettrais donc à votre service mes connaissances en matière de développment web.
         
-    %hr
+    %li#enhance
+      %img(src="/images/accueil/enhance.jpg")
+      %h3 Améliorer
+      %p 
+        Malgré l'application et le soin apporté aux premières version, un projet web se doit d'avoir une approche agile et itérative. Nous essaierons donc ensemble, d'améliorer celui ci à chaque nouvelle version.
+  %hr
+ 
+  
+  %ul.developments
+    %li#web-application
+      %img(src="/images/accueil/website.jpg")
+      %h3 Applications web
+      %p
+        Vous souhaitez monter un projet sur le web, je serais ravi de participer avec vous au développement de celui ci.
+        Le développement est le coeur de mon travail, surement la partie qui me plait le plus, je mettrais donc à votre service mes connaissances en matière de développement web.
+      %p
+        J'aurais plaisir à travailler avec des technologies multiples, que ce soit le langage (Ruby, PHP), le framework (Rails, Sinatra, Symfony, Kohana), le système de gestion de base données (Mysql, PostgreSQL) ou des technologies plus neuves encore (NodeJS, Redis, MongoDB...)
+    %li#social-media
+      %img(src="/images/accueil/social-network.jpg")
+      %h3 Réseaux sociaux
+      %p
+        Facebook, Twitter, les réseaux sociaux sont partout, et de plus en plus immanquables.
+        Si votre société souhaite bénéficier d'une visibilité sur ces réseaux, nous pouvons envisager ensemble de construire les outils nécessaires à cette visibilité.
+      %p
+        J'ai eu l'occasion d'utiliser les API Facebook, notamment le FBML et l'API REST avec Facebooker, ainsi que les techniques d'utilisation virale du réseau social.
+        J'ai également eu l'occasion d'utiliser les API Twitter et notamment l'API de streaming.
 
-.footer
-  %a(href="/archives.html" title="archives") &laquo; Blog Archives
+  .passionate
+    %h3 Passionné
+    %p
+      Déjà quelques années passées aux côtés des professionnels du web, et toujours pas le moindre indice de lassitude.
+      Le web me passionne tous les jours un peu plus depuis que j'ai compris qu'il ne tenait qu'à nous d'en faire l'outil qui répondra à nos besoins.
+      Le web est une énorme boite de Légo ou de Mécano, où de nouvelles pièces viennent tous les jours élargir l'éventail des possibles.
+      Il ne tient qu'à nous de construire grâce à lui les applications qui répondront aux besoins des utilisateurs les plus variés. 
+      C'est pourquoi j'essai de consacrer chaque jour, une partie de mon temps à découvrir et essayer la nouvelle pièce de cet énorme construction qui permettra peut être demain à votre projet le plus fou, de devenir réalité.
+  %hr
+  
+  .freelance
+    %h3 Freelance
+    %p
+      En faisant appel à un Freelance, vous garantissez pour votre projet un maximum de qualité pour plusieurs raisons : 
+    %ul
+      %li 
+        Vous aurez à faire à un unique interlocuteur durant toutes les phases de conception/réalisation de votre projet, vous garantissant ainsi une forme d'homogénéité dans les différents composants de votre application.
+      %li
+        Vous faites appel à un passionné, qui mettra toujours au premier rang de ses priorité la qualité du produit fini, loin devant des considérations plus matérialistes d'une agence.
+      %li
+        Vous bénéficiez d'une réactivité maximum, le freelance saura, dans les limites du raisonnable intégrer vos demandes urgentes à son planning.
+    %hr
+  
+  .contact
+    %h3 Une idée de projet ? 
+    %p 
+      Vous avez une idée de projet, une question, n'hésitez pas à 
+      %a(href= '/contact.html') me contacter
+      et à me faire part de vous souhaits et/ou demandes.    

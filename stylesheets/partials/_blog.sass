@@ -1,10 +1,16 @@
 .blog
-  article
-    position: relative
-    display: block
   .article-content
     +jb_section
-    padding= 12px !base_font_size * 1.5 35px !base_font_size * 1.5 
+    &:hover
+      +box-shadow(#36C, 15px)
+
+    & > p, & > h1
+      position: relative
+      display: block
+      +append(1)
+      +prepend(1)    
+      overflow: hidden
+
     a[href^="#result"]
       font-size: 0.8em
     a[href^="#result"], a[href^="#anchor"]
@@ -26,34 +32,10 @@
       line-height: 1.3em
       background: rgba(30,30,30,0.1)
       border: 1px solid #FFF
-    p.delicious-post, p.twitter-post, p.blogpost-post
-      +heading-font
-      width: 191px
-      height: 52px
-      padding: 3px 0 0 0
-      position: absolute
-      right: -17px
-      top: 10px
-      line-height: 50px
-      text-indent: 60px
-      text-transform: uppercase
-      color: #FFF
-      img
-        position: absolute
-        top: 8px
-        left: 30px
-    p.delicious-post
-      background: url('/images/delicious_tab.png') no-repeat
-    p.twitter-post
-      background: url('/images/twitter_tab.png') no-repeat
-    p.blogpost-post
-      background: url('/images/blogpost_tab.png') no-repeat
+ 
     ul.tags
       text-align: right
-      margin: 0
-      position: absolute
-      bottom: 2px
-      right: 2px
+      margin: 10px
       li
         display: inline-block
         padding: 0 10px
@@ -66,12 +48,6 @@
         +border-bottom-right-radius(0)
     h1
       font-size: 24px
-  .delicious-article .article-content:hover
-    +box-shadow(#36C, 15px)
-  .twitter-article .article-content:hover
-    +box-shadow(#6D6, 15px)
-  .blogpost-article .article-content:hover
-    +box-shadow(#C33, 15px)
   footer
     padding-top= !base_font_size
     

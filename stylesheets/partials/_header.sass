@@ -4,32 +4,34 @@ header
   padding: 0
   overflow: hidden
   div
-    width= !page_width
+    width= !blueprint_container_size
     position: relative
     display: block
     overflow: hidden
     margin: 30px auto 0 auto
     a.title
+      +column(8)      
+      text-decoration: none
       img
-        float: left
+        +float-left
       h1
-        float: left
-        font-size= !h1
+        +float-left
+        width: 208px
+        border-right: 2px solid #FFF
+        text-align: center
+        font-size= 34px
         height= 100px
         line-height= 100px
-        padding-left: 10px
-        padding-right: 30px
-        border-right: 2px solid #FFF
         +heading-font
         color= !title_color
-        text-decoration: none
       h1:hover
         +btn-text-shadow(#FFF)
     blockquote
-      float: left
-      width: 480px
+      padding: 20px 0
+      +column(15 , true)
+      +prepend(1)
+      +float-left
       line-height: 28px
-      padding: 17px 10px 0 30px
       margin-bottom: 0
       cite
         display: inline

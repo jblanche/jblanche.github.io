@@ -1,34 +1,32 @@
 nav
   display: block
   margin: 0 auto
-  width= !page_width
+  width= !blueprint_container_size
   padding: 0
   overflow: hidden
   clear: both
   color: #DDD
   ul
-    width= 520px
+    +column(ceil(2 * !blueprint_grid_columns / 3), true)
+    padding: 0 5px
     background= darken(!body_bg, 30)
     +border-bottom-radius(7px)
+    +float-right
     display: block
     overflow: hidden
-    margin: 0 0 0 360px
     li:last-child
       border-right: none
     li
       display: block
       float: left
-      padding: 0 15px
+      padding: 0 20px
       text-align: right
-      border-right: 1px solid
-      border-color= darken(!body_bg, 40)
+      border-right= 1px solid darken(!body_bg, 40)
       a
         display: block
         font-size: 14px
-        color: #2FC2EF
+        color: #CCC
         //text-decoration: none
-      a:visited
-        color: #2FC2EF
       span
         font-family: "QuicksandBookOblique", "Helvetica Neue", Helvetica, Arial, sans-serif
     li.active a
