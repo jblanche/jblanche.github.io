@@ -15,9 +15,9 @@ google_analytics_tracking_id:
 body_id: home
 ---
 
-!!!
+!!! 5
 %html
-  %head(profile="http://www.w3.org/2005/10/profile")
+  %head
     %title #{page.blog_title} :: #{page.title} - Jonathan Blanchet's Website
     - if page.respond_to? :description
       %meta(name="description" content="#{page.description}")/
@@ -38,7 +38,7 @@ body_id: home
       %nav
         %ul
           %li{:class => "#{'active' if page.title == 'Accueil'}"}
-            %a(href="/about.html") Accueil
+            %a(href="/") Accueil
           %li{:class => "#{'active' if page.title == 'Blog'}"} 
             %a(href="/blog.html") Blog
           %li{:class => "#{'active' if page.title == 'Microblogging'}"} 
@@ -64,6 +64,13 @@ body_id: home
           .blog
             %article{:class => "#{page.categories.first}-article"}
               .article-content
+                %a{:rel => "bookmark"}
+                  %abbr{:title => Date::MONTHNAMES[page.date.month]}= Date::ABBR_MONTHNAMES[page.date.month]
+                  = "%.2d" % page.date.day
+                  %sup= ordinalize(page.date.day)
+                  %abbr{:title => page.date.year}= "'" + ("%.2d" % (page.date.year.to_i-2000))
+                  %time{:datetime => page.date.strftime("%Y-%m-%d")}= page.date.strftime("%Y-%m-%d")
+              
                 %h1= page.title
                 %p{:class => "#{page.categories.first}-post"}
                   = page.categories.first
@@ -80,12 +87,6 @@ body_id: home
                     %a(href="http://#{page.disqus_short_name}.disqus.com/?url=ref") View the discussion thread
                   %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
                 
-              %a{:rel => "bookmark"}
-                %abbr{:title => Date::MONTHNAMES[page.date.month]}= Date::ABBR_MONTHNAMES[page.date.month]
-                = "%.2d" % page.date.day
-                %sup= ordinalize(page.date.day)
-                %abbr{:title => page.date.year}= "'" + ("%.2d" % (page.date.year.to_i-2000))
-                %time{:datetime => page.date.strftime("%Y-%m-%d")}= page.date.strftime("%Y-%m-%d")
             
         - else
           = rp(content)

@@ -1,2 +1,57 @@
 section#about
   +jb_section
+  h2
+    +prepend(1)
+  & > div, & > ul
+    +append(1)
+    +prepend(1)
+    position: relative
+    overflow: hidden
+  .myself
+    display: block
+    overflow: hidden
+    img
+      +column(7)
+    p
+      +column(14 , true)
+      +prepend(1)
+      
+  #imagine, #design, #develop, #enhance
+    +column(5)
+    margin-right= (!blueprint_grid_width)
+    img
+      margin: 0 auto
+      display: block
+    h3
+      text-align: center
+    p
+      font-size: .9em
+      text-align: justify
+      line-height: 20px
+  #enhance
+    +column(5, true)
+  
+  .competences, .developper, .passionate, .freelance, .contact
+    overflow: hidden
+
+  .developments
+  
+  #web-application
+    +column(10)
+    +append(1)
+  #social-media
+    +prepend(1)
+    +column(10, last)
+  #web-application, #social-media
+    img
+      margin: 0 auto
+      display: block
+    h3
+      text-align: center
+    p
+      font-size: .9em
+      text-align: justify
+      line-height: 20px
+  .freelance
+    ul
+      +prepend(1)

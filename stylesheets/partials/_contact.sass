@@ -1,2 +1,25 @@
 section#contact
   +jb_section
+  & > p, & > h2, & > h3, & > ul, & > div
+    position: relative
+    display: block
+    +append(1)
+    +prepend(1)    
+    overflow: hidden
+  &:hover
+    +box-shadow(#36C, 15px)
+  
+  #mail, #telephone, #facebook, #twitter
+    +column(5)
+    margin-right= (!blueprint_grid_width)
+    img
+      margin: 0 auto
+      display: block
+    h3
+      text-align: center
+    p
+      font-size: .9em
+      text-align: center
+      line-height: 20px    
+  #twitter
+    +last

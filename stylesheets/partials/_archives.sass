@@ -1,2 +1,11 @@
 section#archives
   +jb_section
+  & > p, & > h2, & > h3, & > ul
+    position: relative
+    display: block
+    +append(1)
+    +prepend(1)    
+    overflow: hidden
+  &:hover
+    +box-shadow(#36C, 15px)
+  
