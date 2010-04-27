@@ -1,14 +1,7 @@
 ---
 blog_title: Jblanche.fr
 
-twitter_user: jblanche
-tweet_count: 3
-show_replies: false
-
-delicious_user: jblanche
-delicious_count: 3
-
-full_url: http://jblanche.fr
+full_url: "http://jblanche.fr"
 disqus_short_name: jblanchefr
 
 google_analytics_tracking_id:
@@ -21,9 +14,49 @@ body_id: home
     %title #{page.blog_title} :: #{page.title} - Jonathan Blanchet's Website
     - if page.respond_to? :description
       %meta(name="description" content="#{page.description}")/
+    - else
+      %meta(name="description"  content="Jblanche.fr est le site d'un freelance concepteur & développeur passionné par le web en général, les frameworks, l'ergonomie, les nouvelles technologies... Bienvenue ! ")
     - if page.respond_to? :keywords
       %meta(name="keywords" content="#{page.keywords}")/
     %meta{:charset => "utf-8"}
+
+    - if page.respond_to? :title
+      %meta(property="og:title"  content="#{page.blog_title} :: #{page.title} - Jonathan Blanchet's Website")
+    - else
+      %meta(property="og:title"  content="Jonathan Blanchet's Website")
+
+    - if page.respond_to? :og_type
+      %meta(property="og:type" content="#{page.og_type}")
+    - else
+      %meta(property="og:type" content="article")
+
+  
+    - if page.respond_to? :url
+      %meta(property="og:url" content="#{page.full_url}#{page.url}")
+    - elsif page.respond_to? :permalink
+      %meta(property="og:url" content="#{page.full_url}#{page.permalink}")
+
+    - if page.respond_to? :og_image
+      %meta(property="og:image" content="#{page.og_image}")
+    - else
+      %meta(property="og:image" content="#{ "http://jblanche.fr/images/logo_site_big.png"   }")
+
+    - if page.respond_to? :description
+      %meta(property="og:description" content="#{page.description}")
+    - else 
+      %meta(property="og:description" content="Jblanche.fr est le site d'un freelance concepteur & développeur passionné par le web en général, les frameworks, l'ergonomie, les nouvelles technologies... Bienvenue ! ")
+
+    %meta(property="og:site_name" content="Jbanche.fr")
+    %meta(property="og:email" content="contact@jblanche.fr")
+    %meta(property="og:phone_number" content="+33679205730")
+    %meta(property="og:latitude" content="48.8145772")
+    %meta(property="og:longitude" content="2.3983726")
+    %meta(property="og:street-address" content="68 boulevard de Brandebourg")
+    %meta(property="og:locality" content="Ivry sur Seine")
+    %meta(property="og:region" content="Ile de France")
+    %meta(property="og:postal-code" content="94200")
+    %meta(property="og:country-name" content="France")
+
     %link(href="/images/favicon.jpg" rel="icon" type="image/png")  
     %link(href="/atom.xml" rel="alternate" title="#{page.blog_title}" type="application/atom+xml")  
     %link(href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
@@ -72,8 +105,6 @@ body_id: home
                   %time{:datetime => page.date.strftime("%Y-%m-%d")}= page.date.strftime("%Y-%m-%d")
               
                 %h1= page.title
-                %p{:class => "#{page.categories.first}-post"}
-                  = page.categories.first
                   
                 = rp(content)
                 %ul.tags
