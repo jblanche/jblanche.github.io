@@ -1,0 +1,35 @@
+---
+title: 'En vrac #13'
+layout: default
+categories: ['delicious']
+---
+
+Des nouvelles de Ruby et/ou Rails :
+"(english)Rails3 Beta 3":http://weblog.rubyonrails.org/2010/4/13/rails-3-0-third-beta-release - Dernière beta avant une RC de Rails 3 ? 
+"(english)Jruby 1.5.0 RC2":http://www.jruby.org/2010/04/28/jruby-1-5-0-RC2.html - JRuby 1.5 est en Release Candidate 
+"(english)IronRuby 1.0":http://ironruby.codeplex.com/releases/view/25901 - Iron Ruby (.Net) est stable ! 
+"(english)Non Blocking Active Record":http://www.igvita.com/2010/04/15/non-blocking-activerecord-rails - Pourquoi on attend Rails3 + Ruby1.9 ! 
+"(english)Grease your test suite":http://grease-your-suite.heroku.com/ - Comment améliorer notablement la vitesse de votre suite de tests
+
+Sass évolue encore : 
+"(english)Selector inheritance in SASS":http://nex-3.com/posts/99-selector-inheritance-the-easy-way-introducing-extend - Sass devient encore un peu plus intéressant.
+"(english)Sass RC1":http://nex-3.com/posts/98-haml-sass-3-release-candidate-1-released - Et sors sa version 3 en Release Candidate.
+
+Pas mal de discussions sur l'Open Graph Protocol de Facebook : 
+"(english)Facebook is the private beta of semantic Web":http://intridea.com/posts/facebook-is-the-private-beta-of-the-semantic-web - Un avis plûtot positif sur l'Open Graph Protocol
+"(english)Why F8 was good for the open web":http://radar.oreilly.com/2010/04/why-f8-was-good-for-the-open-w.html - Un autre
+"(english)Facebook Open Graph Protocol from a developper perspective":http://www.25hoursaday.com/weblog/2010/04/24/FacebooksOpenGraphProtocolFromAWebDevelopersPerspective.aspx - Et un dernier.
+
+Beaucoup de positif et pourtant il y aurait de quoi contre balancer, mais les différents articles que j'ai lu ne m'ont pas convaincus... 
+
+
+Ou sur le futur du Web : 
+"(english)Aves Engine":http://www.youtube.com/watch?v=Ol3qQ4CEUTo - Jeu de plateforme entièrement réalisé avec la Web Stack (CANVAS+JS+HTML+CSS). 
+"(english)WebGL demo":http://twitter.com/paulrouget/status/12103971673 - Ça promet ! 
+"(english)Mozilla Flexible box model":http://hacks.mozilla.org/2010/04/the-css-3-flexible-box-model/ - Voilà comment nous utiliserons le positionnement CSS dans quelques années.
+"(english)Understanding Node.js":http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb - Excellente vulgarisation de Node.js
+"(english)Steve Jobs thoughts on Flash":http://www.apple.com/hotnews/thoughts-on-flash/ - De bons arguments, mais surement pas suffisants pour interdire Flash sur l'Ipad.
+
+Plus quelques liens en vrac :
+"(english)Ipad multitouch interactions":http://www.lukew.com/ff/entry.asp?991 - L'espace donné au multitouch par l'Ipad (par rapport à l'Iphone) permet plein de nouvelles choses.
+"(english)Ubuntu Lucid Linx":http://www.ubuntu.com/ - La dernière monture d'Ubuntu est sortie, peut être le bon moment pour revenir à Linux ? 
