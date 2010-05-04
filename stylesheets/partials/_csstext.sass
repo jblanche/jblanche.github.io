@@ -1,0 +1,84 @@
+.lab#css-text
+  +jb_section
+  &:hover
+    +box-shadow(#36C, 15px)
+
+  font-family: "QuicksandBook", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 2.2em
+  p
+    line-height: 1.4em
+    margin-left: 20px
+    opacity: 0
+    -webkit-animation: openingTextIntro 2s ease-out 0 1 normal forwards
+
+    span.typo
+      color= !link_color
+      text-decoration: none
+      opacity: 0
+      position: relative
+    #site-name
+      top: -1000px
+      -webkit-animation: showLink1 1s ease-out 2s 1 normal forwards
+    #work
+      right: -1000px
+      -webkit-animation: showLink2 1s ease-out 3s 1 normal forwards
+    #passionate
+      -webkit-animation: showLink3 1s ease-out 4s 1 normal forwards
+    #welcome
+      bottom: -1000px
+      -webkit-animation: showLink4 1s ease-out 5s 1 normal forwards, swingLink 2s ease-in-out 5s
+    
+/* Texte */
+@-webkit-keyframes openingTextIntro
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+/* Links */
+@-webkit-keyframes showLink1
+  0%
+    opacity: 0
+  100%
+    color: #2FC2EF
+    opacity: 1
+    top: 0
+
+
+@-webkit-keyframes showLink2
+  0%
+    opacity: 0
+  100%
+    color: #2FC2EF
+    opacity: 1
+    right: 0
+
+@-webkit-keyframes showLink3
+  0%
+    opacity: 0
+  100%
+    color: #2FC2EF
+    opacity: 1
+
+
+@-webkit-keyframes showLink4
+  0%
+    opacity: 0  
+  100%
+    color: #2FC2EF
+    opacity: 1
+    bottom: 0
+
+
+/* Swing */
+@-webkit-keyframes swingLink
+  0%
+    -webkit-transform: rotateZ(0deg)
+  12%
+    -webkit-transform: rotateZ(-3deg)
+  25%
+    -webkit-transform: rotateZ(3deg)
+  37%
+    -webkit-transform: rotateZ(0deg)
+  100%
+    -webkit-transform: rotateZ(0deg)
