@@ -1,7 +1,6 @@
 $(document).ready(function(){
   //Temporarely disable Websockets since I'm not happy with them right now
-  
-  if (!Modernizr.cssanimations) {
+  if ($('#css-text').length > 0 && !Modernizr.cssanimations) {
    $('#css-text p').css('opacity', 1);
    $('#css-text span.typo').css('opacity', 1);
    $('#site-name').css('top', '0');

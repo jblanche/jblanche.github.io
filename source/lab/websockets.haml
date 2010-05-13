@@ -1,18 +1,79 @@
 ---
-layout: default
-title: Contact
-permalink: '/lab/css_text.html'
+layout: lab
+title: "Lab : Websockets and twitter"
+permalink: '/lab/websockets.html'
 og_type: 'website'
 ---
 
-%section.lab#css-text
-  %p
-    %span.typo#site-name Jblanche.fr
-    est le site d'un 
-    %span.typo#work freelance concepteur
-    %span &
-    développeur
-    %span.typo#passionate passionné
-    par le web en général,
-    les frameworks, l'ergonomie, les nouvelles technologies... 
-    %span.typo#welcome Bienvenue !
+:javascript
+  $(document).ready(function(){
+    // Tweet class
+    var Tweet = Class.extend({
+      // constructor
+      init: function(tweet) {
+        this.user = tweet.user.screen_name;
+        this.tweet_id = tweet.id;
+        this.text = tweet.text;
+        this.avatar =  tweet.user.profile_image_url
+      },
+      
+      // methods
+      link: function(){
+        return "http://www.twitter.com/" + this.user + "/status/" + this.tweet_id 
+      }, 
+      
+      formatted_text: function(){
+        var formatted_text = this.text ; 
+        if(formatted_text.search(/(https?:\/\/[-\w\.]+:?\/[\w\/_\.]*(\?\S+)?)/) > -1) {
+          formatted_text = formatted_text.replace(/(https?:\/\/[-\w\.]+:?\/[\w\/_\.]*(\?\S+)?)/, "<a href='$1'>$1</a>");
+          }
+        if(formatted_text.search(/@\w+/) > -1) {
+          formatted_text = formatted_text.replace(/(@)(\w+)/g, "$1<a href='http://twitter.com/$2'>$2</a>");
+        }
+        return formatted_text ;
+      },
+      
+      to_html: function(){
+        return $('<div />').
+                addClass('tweet').
+                hide().
+                append($('<div />')
+                  .addClass('tweet-content')
+                  
+                  .append($('<img />')
+                    .attr({src: this.avatar})
+                  )
+                  
+                  
+                  .append($('<a />')
+                    .addClass('screenname')
+                    .attr({href: this.link()}).
+                    html(this._user)
+                  )
+                  .append($('<p />')
+                    .html(" "+this.formatted_text())
+                  )
+                );
+      }
+      
+      
+      });
+
+    ws = new WebSocket("ws://localhost:8080");
+    ws.onmessage = function(evt) {
+      data = JSON.parse(evt.data);
+      tweet = new Tweet(data);
+      
+      var div = tweet.to_html() ;
+      
+      if($('#tweets div.tweet').size() > 5) {
+        $('#tweets div.tweet:last').slideDown(100, function() {
+          $(this).remove();
+        });
+      }
+      $('#tweets').prepend(div);
+      div.slideDown(140);
+    };
+  });
+
+#tweets.websockets
