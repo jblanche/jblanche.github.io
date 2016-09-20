@@ -11,8 +11,13 @@
     {% assign custom_url = site.url | append: site.baseurl %}
     {% assign full_base_url = site.github.url | default: custom_url %}
 
+    {% if jekyll.environment == 'production' %}
+      <link href="{{ "/css/main.css" | prepend: site.github.url | replace: 'http://', 'https://' }}" rel="stylesheet">
+    {% else %}
+      <link href="{{ "/css/main.css" }}" rel="stylesheet">
+    {% endif %}
 
-    <link href="{{ "/css/main.css" | prepend: site.github.url | replace: 'http://', 'https://' }}" rel="stylesheet">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: full_base_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: full_base_url }}">
 
@@ -29,7 +34,7 @@
         </div>
         <nav id="nav" role="navigation" class="menu">
           <ul>
-            <li>
+            <li class="current">
               <a title="About Jonathan Blanchet – Web Developer" href="#about">About</a>
             </li>
             <li>
@@ -45,14 +50,21 @@
         </nav>
         <h2>Jonathan Blanchet</h1>
         <h3>Web developer</h2>
-        <p>
+        <p id="about">
           Hi,
           I’m a passionated freelance web developer from Paris, France.
           I develop websites and web applications using the web stack and recent tooling.
           You may also find me teaching JavaScript from times to times.
           Eventually, I'm an happy member of the LAB212 interdisciplinary art collective.
         </p>
-        <a href="#portfolio" class="portfolio">View portfolio</a>
+        <a href="#portfolio" class="portfolio">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="4 22 108 58" style="top: 0px;" xml:space="preserve">
+              <g>
+                <path class="st0" d="M57.9,72.5c-0.8,0-1.5-0.3-2.1-0.9L18.9,34.7c-1.2-1.2-1.2-3.1,0-4.3c1.2-1.2,3.1-1.2,4.3,0l34.8,34.9
+                    l34.9-34.9c1.2-1.2,3.1-1.2,4.3,0c1.2,1.2,1.2,3.1,0,4.3l-37,36.9C59.4,72.2,58.7,72.5,57.9,72.5z" style="fill: rgb(255, 255, 255);"></path>
+              </g>
+          </svg>
+        </a>
       </div>
     </header>
     <main class="page-content" aria-label="Content">
@@ -152,41 +164,24 @@
                 method="POST">
               <p>
                   <label for="name" class="required">Your name</label>
-                  <input type="text" name="name" value="" size="40" class="" aria-required="true" aria-invalid="false" placeholder="eg. John Doe">
+                  <input type="text" name="name" id="name" value="" size="40" class="" aria-required="true" aria-invalid="false" placeholder="eg. John Doe">
               </p>
 
               <p>
                   <label for="email" class="required">Email address</label>
-                  <input type="text" name="email" value="" size="40" class="" aria-required="true" aria-invalid="false" placeholder="john@doe.com">
+                  <input type="text" name="email" id="email" value="" size="40" class="" aria-required="true" aria-invalid="false" placeholder="john@doe.com">
               </p>
 
               <p>
                   <label for="project" class="required">Project Description</label>
-                  <textarea name="project" value="" size="40" class="" aria-required="true" aria-invalid="false" placeholder="asdasda dasd asd "></textarea>
+                  <textarea name="project" value="" id="project" size="40" class="" aria-required="true" aria-invalid="false" placeholder="asdasda dasd asd "></textarea>
               </p>
-
               <input type="submit" value="Send">
           </form>
         </div>
       </div>
     </main>
     <script>
-
-      function scrollTo(scrollY, scrollDuration) {
-          var cosParameter = window.scrollY / 2,
-              scrollCount = 0,
-              oldTimestamp = performance.now();
-          function step (newTimestamp) {
-              scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
-              if (scrollCount >= Math.PI) window.scrollTo(0, scrollY);
-              if (window.scrollY === scrollY) return;
-              window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
-              oldTimestamp = newTimestamp;
-              window.requestAnimationFrame(step);
-          }
-          window.requestAnimationFrame(step);
-      }
-
       (function(d) {
         var config = {
           kitId: 'uor5qdi',
@@ -195,9 +190,8 @@
         },
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
-
-
     </script>
+    <script src="/js/main.js" charset="utf-8"></script>
   </body>
 
 </html>

@@ -34,8 +34,6 @@ h6 {
   font-size: 1.4em;
 }
 
-
-
 nav {
   position: absolute;
   right: 0;
@@ -76,7 +74,12 @@ header {
   }
 
   a.portfolio {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    &:visited,
+    &:hover,
+    &:active {
+      color: #FFF;
+    }
   }
 
   h2, h3 {
@@ -92,7 +95,7 @@ header {
       text-decoration: none;
 
       &:visited {
-          color: darken($brand-bg-color, 15%);
+          color: #FFF;
       }
 
       &:hover {
@@ -105,6 +108,20 @@ header {
         display: block;
       }
   }
+}
+
+.portfolio {
+  transform: translateY(0);
+  transition: .3s transform;
+}
+
+.portfolio:hover {
+  transform: translateY(5px);
+}
+
+.portfolio svg {
+  width: 20px;
+  color: #FFF;
 }
 
 .works {
@@ -137,5 +154,47 @@ header {
   li {
     flex: 1;
     list-style-type: none;
+  }
+}
+
+.contact {
+
+  padding-bottom: 2em;
+
+  form {
+    position: relative;
+  }
+
+  p {
+    display: flex;
+    font-size: 1em;
+  }
+
+  label {
+    flex: 1;
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+
+  input, textarea {
+    flex: 2;
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  textarea {
+    height: 10em;
+  }
+
+  input[type=submit] {
+    background: $brand-color;
+    color: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    padding: .5em 1em;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1em;
   }
 }
