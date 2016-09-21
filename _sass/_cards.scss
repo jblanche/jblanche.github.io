@@ -1,10 +1,9 @@
 figure.card {
-  background: #42b078;
   position: relative;
   float: left;
   overflow: hidden;
   margin: 10px 1%;
-  background: #1dafe7;
+  background: $brand-color;
   text-align: center;
   cursor: pointer;
   box-shadow: 5px 5px 10px #CCC;
