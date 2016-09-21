@@ -179,10 +179,13 @@ footer {
   .links {
     flex: 1;
     text-align: right;
+    padding-top: 12px;
+
     li {
       list-style-type: none;
       display: inline-block;
       color: #FFF;
+      margin: 0 1em;
     }
   }
 }
