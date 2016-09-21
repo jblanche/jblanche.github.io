@@ -1,6 +1,6 @@
 .menu {
     line-height: 1;
-    margin: 0 auto 3em;
+    margin: 0 auto 3rem;
 }
 
 .menu ul {
@@ -14,19 +14,19 @@
 
 .menu li {
     display: block;
-    margin: 1em 0;
+    margin: 1rem 0;
 }
 
 .menu a {
     position: relative;
     text-decoration: none;
     display: block;
-    margin: 0 1.5em;
-    padding: 0.65em 0;
+    margin: 0 1.5rem;
+    padding: 0.65rem 0;
     text-align: center;
     color: #FFF;
     transition: background 0.3s, color 0.3s;
-    font-size: 1.05em;
+    font-size: 1.05rem;
     text-transform: uppercase;
     cursor: pointer;
     user-select: none;
