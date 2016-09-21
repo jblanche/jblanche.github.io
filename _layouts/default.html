@@ -29,34 +29,37 @@
   <body>
     <header>
       <div class="wrapper">
-        <div class="name">
-          <a class="homepage" href="/"><h1>jblanche.fr</h1></a>
+        <div class="heading">
+          <div class="name">
+            <a class="homepage" href="/">
+              <h1>Jonathan Blanchet</h1>
+              <h2>Web developer</h2>
+            </a>
+          </div>
+          <nav id="nav" role="navigation" class="menu">
+            <ul>
+              <li>
+                <a title="About Jonathan Blanchet – Web Developer" href="{% if page.title != 'index' %}/{% endif %}#about">About</a>
+              </li>
+              <li>
+                <a title="My portfolio" href="{% if page.title != 'index' %}/{% endif %}#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a title="My skills" href="{% if page.title != 'index' %}/{% endif %}#skills">Skills</a>
+              </li>
+              <li>
+                <a title="Contact me" href="{% if page.title != 'index' %}/{% endif %}#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav id="nav" role="navigation" class="menu">
-          <ul>
-            <li>
-              <a title="About Jonathan Blanchet – Web Developer" href="{% if page.title != 'index' %}/{% endif %}#about">About</a>
-            </li>
-            <li>
-              <a title="My portfolio" href="{% if page.title != 'index' %}/{% endif %}#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a title="My skills" href="{% if page.title != 'index' %}/{% endif %}#skills">Skills</a>
-            </li>
-            <li>
-              <a title="Contact me" href="{% if page.title != 'index' %}/{% endif %}#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
         {% if page.title == 'index' %}
-        <h2>Jonathan Blanchet</h1>
-        <h3>Web developer</h2>
         <p id="about">
           Hi,
-          I’m a passionated freelance web developer from Paris, France.
+          I’m a passionated <b>freelance web developer</b> from Paris, France.
           I develop websites and web applications using the web stack and recent tooling.
-          You may also find me teaching JavaScript from times to times.
-          Eventually, I'm an happy member of the LAB212 interdisciplinary art collective.
+          You may also find me <b>teaching JavaScript</b> from times to times.
+          Eventually, I'm an happy member of the <b>LAB212</b> interdisciplinary art collective.
         </p>
         <a href="#portfolio" class="portfolio">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="4 22 108 58" style="top: 0px;" xml:space="preserve">
@@ -72,6 +75,21 @@
     <main class="page-content" aria-label="Content">
       {{ content }}
     </main>
+    <footer>
+      <div class="wrapper">
+        <div class="name">
+          <a class="homepage" href="/">
+            <h1>Jonathan Blanchet</h1>
+            <h2>Web developer</h2>
+          </a>
+        </div>
+        <ul class="links">
+          <li>Lab212</li>
+          <li>Twitter</li>
+          <li>Github</li>
+        </ul>
+      </div>
+    </footer>
     <script>
       (function(d) {
         var config = {

@@ -1,26 +1,27 @@
 body {
-  background: #f4f4f4;
+  background: #FFF;
   scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
   font-family: $title-font-family;
-  text-transform: uppercase;
 }
 
 h1 {
   font-size: 2.4em;
-  margin-bottom: 2.4em;
+  font-family: $logo-font-family;
+  margin-bottom: 0;
 }
 
 h2 {
-  font-size: 2.2em;
-  margin-top: 2em;
+  text-transform: uppercase;
+  text-align: center;
 }
+
 
 h3 {
   font-size: 2em;
-  border-bottom: 1px solid $bg-color;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -44,18 +45,19 @@ nav {
 
   li {
     display: inline-block;
-    text-transform: uppercase;
     margin: 1em;
   }
 }
 
 .wrapper {
-  background: $brand-bg-color;
   margin: 1em auto;
   padding: 30px 100px;
   box-sizing: border-box;
 }
 
+.skills {
+  background: #F4F4F4;
+}
 header {
   background: $brand-color;
   color: $brand-bg-color;
@@ -63,6 +65,17 @@ header {
   h1, h2, h3, h4 {
     text-transform: none;
     border: none;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-top: -0.7em;
+    font-size: 1.3em;
+    opacity: 0.5;
+  }
+
+  .heading {
+    display: flex;
   }
 
   .wrapper {
@@ -73,9 +86,15 @@ header {
   }
 
   p {
-    width: 70%;
+    width: 50%;
+    text-align: center;
     font-size: 1.2em;
     margin: 2em auto 2em auto;
+    font-weight: lighter;
+  }
+
+  b {
+    white-space: nowrap;
   }
 
   a.homepage:hover {
@@ -91,7 +110,7 @@ header {
     }
   }
 
-  h2, h3 {
+  h3 {
     text-align: center;
     text-transform: capitalize;
   }
@@ -119,6 +138,50 @@ header {
   }
 }
 
+footer {
+  background: #303030;
+  margin-bottom: 0;
+  margin-top: 2em;
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: #FFF;
+      text-decoration: none;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .name {
+    display: flex;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-top: -0.7em;
+    font-size: 1.3em;
+    opacity: 0.5;
+  }
+
+  .links {
+    flex: 1;
+    text-align: right;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      color: #FFF;
+    }
+  }
+}
+
 .portfolio {
   transform: translateY(0);
   transition: .3s transform;
@@ -129,9 +192,9 @@ header {
 }
 
 .portfolio svg {
-  width: 50px;
+  width: 25px;
   color: #FFF;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .works {
@@ -162,8 +225,23 @@ header {
   }
 
   li {
-    flex: 1;
     list-style-type: none;
+    background: white;
+    margin-bottom: 1em;
+    padding: 1em;
+    display: flex;
+  }
+
+  h4 {
+    color: $brand-color;
+    margin-top: 0;
+    flex: 1;
+    text-transform: uppercase;
+    padding-right: 2em;
+  }
+
+  p {
+    flex: 3;
   }
 }
 
@@ -204,7 +282,6 @@ header {
     right: 0;
     padding: .5em 1em;
     color: #FFF;
-    text-transform: uppercase;
     font-size: 1em;
   }
 }

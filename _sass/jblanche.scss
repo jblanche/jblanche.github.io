@@ -1,11 +1,12 @@
 // Define defaults for each variable.
 
-$base-font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: "freight-sans-pro", sans-serif !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
-$title-font-family: "niveau-grotesk",sans-serif !default;
+$title-font-family: "freight-sans-pro", serif !default;
+$logo-font-family: "aw-conqueror-didot", serif !default;
 
 $spacing-unit:     30px !default;
 
