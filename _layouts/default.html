@@ -34,17 +34,17 @@
         </div>
         <nav id="nav" role="navigation" class="menu">
           <ul>
-            <li class="current">
-              <a title="About Jonathan Blanchet – Web Developer" href="#about">About</a>
+            <li>
+              <a title="About Jonathan Blanchet – Web Developer" href="{% if page.title != 'index' %}/{% endif %}#about">About</a>
             </li>
             <li>
-              <a title="My portfolio" href="#portfolio">Portfolio</a>
+              <a title="My portfolio" href="{% if page.title != 'index' %}/{% endif %}#portfolio">Portfolio</a>
             </li>
             <li>
-              <a title="My skills" href="#skills">Skills</a>
+              <a title="My skills" href="{% if page.title != 'index' %}/{% endif %}#skills">Skills</a>
             </li>
             <li>
-              <a title="Contact me" href="#contact">Contact</a>
+              <a title="Contact me" href="{% if page.title != 'index' %}/{% endif %}#contact">Contact</a>
             </li>
           </ul>
         </nav>
