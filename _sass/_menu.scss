@@ -13,8 +13,28 @@
 }
 
 .menu li {
-    display: block;
-    margin: 1rem 0;
+  display: block;
+  margin: 1rem 0;
+  position: relative;
+
+  &:after {
+    content: '\2022';
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    opacity: 0.5;
+  }
+
+  &:last-child {
+    a {
+      margin-right: 0;
+    }
+    
+    &:after {
+      content: ''
+    }
+  }
 }
 
 .menu a {

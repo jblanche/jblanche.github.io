@@ -91,7 +91,7 @@ header {
   }
 
   p {
-    width: 60%;
+    width: 55%;
     text-align: center;
     font-size: 1.2rem;
     margin: 2rem auto 2rem auto;
@@ -186,6 +186,11 @@ footer {
       display: inline-block;
       color: #FFF;
       margin: 0 1em;
+      padding: 10px 0;
+    }
+
+    svg {
+      height: 40px;
     }
   }
 }
