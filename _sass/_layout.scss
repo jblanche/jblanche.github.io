@@ -10,6 +10,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 2.4em;
+  margin-bottom: 2.4em;
 }
 
 h2 {
@@ -24,6 +25,7 @@ h3 {
 
 h4 {
   font-size: 1.8em;
+  margin-top: 1.8em;
 }
 
 h5 {
@@ -200,5 +202,13 @@ header {
     color: #FFF;
     text-transform: uppercase;
     font-size: 1em;
+  }
+}
+
+.work {
+  font-size: 1.1em;
+
+  .screenshots img {
+    margin: 1em;
   }
 }
