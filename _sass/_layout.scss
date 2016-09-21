@@ -26,6 +26,7 @@ h3 {
 h4 {
   font-size: 1.8em;
   margin-top: 1.8em;
+  color: #666;
 }
 
 h5 {
@@ -68,11 +69,13 @@ header {
     background: transparent;
     position: relative;
     margin-top: 0;
+    padding-bottom: 0;
   }
 
   p {
-    width: 66.66%;
-    margin: 0 auto 2em auto;
+    width: 70%;
+    font-size: 1.2em;
+    margin: 2em auto 2em auto;
   }
 
   a.homepage:hover {
@@ -126,8 +129,9 @@ header {
 }
 
 .portfolio svg {
-  width: 20px;
+  width: 50px;
   color: #FFF;
+  opacity: 0.75;
 }
 
 .works {
