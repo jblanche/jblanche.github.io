@@ -73,6 +73,10 @@ header {
     margin: 0 auto 2em auto;
   }
 
+  a.homepage:hover {
+    text-decoration: none;
+  }
+
   a.portfolio {
     margin-bottom: 1em;
     &:visited,
