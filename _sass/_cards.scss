@@ -7,6 +7,7 @@ figure.card {
   background: #1dafe7;
   text-align: center;
   cursor: pointer;
+  box-shadow: 5px 5px 10px #CCC;
 }
 
 
@@ -14,7 +15,7 @@ figure img {
   position: relative;
   display: block;
   min-height: 100%;
-  opacity: 0.4;
+  opacity: 1;
   max-width: none;
   width: calc(100% + 20px);
   transition: opacity 0.35s, transform 0.35s;
@@ -41,19 +42,8 @@ figure figcaption {
   backface-visibility: hidden;
 }
 
-figure.card h2 {
-  position: relative;
-  overflow: hidden;
-  padding: 0.5em 0;
-  margin: 0;
-  font-weight: 300;
-  font-size: 1.2em;
-  & span {
-    font-weight: 800;
-  }
-}
 
-figure.card h2::after {
+figure.card p::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -66,7 +56,7 @@ figure.card h2::after {
 
 }
 
-figure.card:hover h2::after {
+figure.card:hover p::after {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
