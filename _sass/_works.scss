@@ -1,0 +1,51 @@
+.work {
+  font-size: 1.375rem;
+
+  .website,
+  .release,
+  .technologies,
+  .screenshots {
+    position: relative;
+    margin: 0 auto 2rem auto;
+    max-width: 700px;
+  }
+
+  h4 {
+    color: $brand-color;
+    margin-top: 0;
+    text-transform: uppercase;
+    padding-right: 2rem;
+    line-height: 1.5;
+    font-size: 1.375rem;
+    margin-bottom: .5rem;
+  }
+
+  .informations {
+    background: #F4F4F4;
+  }
+
+  .device {
+    clear: both;
+  }
+
+  .screenshots img {
+    margin: 1rem;
+    float: left;
+    width: calc(100% - 2rem);
+  }
+
+  @include media-query($on-tablet) {
+    h4 {
+      position: absolute;
+      text-align: right;
+      left: -180px;
+      width: 150px;
+    }
+
+    .screenshots img {
+      margin: 1rem;
+      float: left;
+      width: calc(50% - 2rem);
+    }
+  }
+}

@@ -50,6 +50,10 @@
 
 	var _links2 = _interopRequireDefault(_links);
 
+	var _lightbox = __webpack_require__(9);
+
+	var _lightbox2 = _interopRequireDefault(_lightbox);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
@@ -183,6 +187,223 @@
 
 	});
 
+
+/***/ },
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var MiniLightbox = __webpack_require__(10);
+
+	console.log(MiniLightbox);
+	MiniLightbox({
+	    selector: ".screenshots img"
+	    // the common container where the images are appended
+	    , delegation: "html"
+	});
+
+	MiniLightbox.customClose = function () {
+	    var self = this;
+	    self.img.classList.add("animated", "fadeOutDown");
+	    setTimeout(function () {
+	        self.box.classList.add("animated", "fadeOut");
+	        setTimeout(function () {
+	            self.box.classList.remove("animated", "fadeOut");
+	            self.img.classList.remove("animated", "fadeOutDown");
+	            self.box.style.display = "none";
+	        }, 500);
+	    }, 500);
+	    return false;
+	};
+
+	MiniLightbox.customOpen = function () {
+	    this.box.classList.add("animated", "fadeIn");
+	    this.img.classList.add("animated", "fadeInUp");
+	};
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+
+	var cache;
+
+	if (global.addEventListener) {
+	    global.addEventListener("scroll", function () {
+	        MiniLightbox.close();
+	    });
+
+	    global.addEventListener("keydown", function (e) {
+	        if (e.which !== 27) {
+	            return;
+	        }
+	        MiniLightbox.close();
+	    });
+	}
+
+	function matchesSelector(selector, element) {
+	    var all = document.querySelectorAll(selector);
+	    for (var i = 0; i < all.length; i++) {
+	        if (all[i] === element) {
+	            return true;
+	        }
+	    }
+	    return false;
+	}
+
+	/**
+	 * MiniLightbox
+	 *
+	 * Initializes the lightbox according to the options.
+	 *
+	 * **Callbacks**:
+	 *
+	 * The following methods can be used to modify the default behavior:
+	 *
+	 *  - `Minilightbox.customOpen` (Function): If it's a function, it will be
+	 *    called then the lightbox is opened. If it returns `false`, the default
+	 *    behavior will be prevented.
+	 *  - `Minilightbox.customClose` (Function): If it's a function, it will be
+	 *    called then the lightbox is closed. If it returns `false`, the default
+	 *    behavior will be prevented.
+	 *
+	 * @name MiniLightbox
+	 * @function
+	 * @param {Object} options An object containing the following fields:
+	 *
+	 *  - `selector` (String): The image query selector.
+	 *  - `delegation` (String): The image container where to handle the delegation.
+	 *
+	 */
+	function MiniLightbox(options) {
+	    var selector = options.selector || options,
+	        elms = document.querySelectorAll(selector),
+	        clickHandler = function clickHandler(e) {
+	        var id = this.id,
+	            fCache = cache[id],
+	            box,
+	            img;
+
+	        if (!id) {
+	            this.setAttribute("id", id = "ml_" + Math.random().toString(36));
+	        }
+
+	        if (fCache) {
+	            MiniLightbox.open(id);
+	        } else {
+	            box = document.createElement("div");
+	            box.setAttribute("class", "ml_box");
+	            img = document.createElement("img");
+	            img.setAttribute("src", this.getAttribute("data-image-opened") || this.src);
+	            box.appendChild(img);
+
+	            box.addEventListener("click", function () {
+	                MiniLightbox.close(id);
+	            });
+
+	            cache[id] = {
+	                el: this,
+	                box: box,
+	                img: img,
+	                opened: false
+	            };
+
+	            document.body.appendChild(box);
+	            MiniLightbox.open(id);
+	        }
+
+	        e.preventDefault();
+	    },
+	        i;
+
+	    for (i = 0; i < elms.length; ++i) {
+	        new Image(elms[i].getAttribute("data-image-opened"));
+	    }
+
+	    if (options.delegation) {
+	        return document.querySelector(options.delegation).addEventListener("click", function (e) {
+	            var el = e.target;
+	            var parents = [el];
+	            while (el) {
+	                parents.push(el = el.parentNode);
+	            }
+	            for (i = 0; i < parents.length; ++i) {
+	                var cPar = parents[i];
+	                if (matchesSelector(options.selector, cPar) && (el = cPar)) {
+	                    break;
+	                }
+	            }
+
+	            if (!el || el.tagName !== 'IMG' || el.parentNode.classList.contains("ml_box")) {
+	                return;
+	            }
+	            clickHandler.call(el, e);
+	        });
+	    }
+
+	    for (i = 0; i < elms.length; ++i) {
+	        (function (cEl) {
+	            cEl.addEventListener("click", clickHandler);
+	        })(elms[i]);
+	    }
+	}
+
+	/**
+	 * close
+	 * Closes the lightboxes.
+	 *
+	 * @name close
+	 * @function
+	 * @param {String} id The lightbox id. If not provided, it will close all the opened lightboxes.
+	 */
+	MiniLightbox.close = function (id) {
+	    if (!id) {
+	        var ids = Object.keys(cache);
+	        for (var i = 0; i < ids.length; ++i) {
+	            MiniLightbox.close(ids[i]);
+	        }
+	        return;
+	    }
+	    if (!cache[id].opened) {
+	        return;
+	    }
+	    cache[id].opened = false;
+
+	    if (typeof MiniLightbox.customClose === "function" && MiniLightbox.customClose.call(cache[id]) === false) {
+	        return;
+	    }
+
+	    cache[id].box.style.display = "none";
+	};
+
+	/**
+	 * open
+	 * Opens the lightbox. This is called internally.
+	 *
+	 * @name open
+	 * @function
+	 * @param {String} id The lightbox id.
+	 */
+	MiniLightbox.open = function (id) {
+	    if (cache[id].opened) {
+	        return;
+	    }
+	    cache[id].opened = true;
+	    if (typeof MiniLightbox.customOpen === "function" && MiniLightbox.customOpen.call(cache[id]) === false) {
+	        return;
+	    }
+	    cache[id].box.style.display = "block";
+	};
+
+	cache = MiniLightbox._cache = {};
+
+	module.exports = MiniLightbox;
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }
 /******/ ]);

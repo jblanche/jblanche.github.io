@@ -21,8 +21,8 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Width of the content area
 $content-width:    1200px !default;
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-tablet:          800px !default;
+$on-desktop:        1000px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -32,7 +32,7 @@ $on-laptop:        800px !default;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+    @media screen and (min-width: $device) {
         @content;
     }
 }
@@ -43,6 +43,8 @@ $on-laptop:        800px !default;
   "./layout",
   "./menu",
   "./cards",
+  "./works",
+  "./lightbox",
   "./paris",
   "./lrqdo",
   "./google"
