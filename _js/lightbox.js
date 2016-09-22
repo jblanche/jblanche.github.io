@@ -1,7 +1,7 @@
 var MiniLightbox = require('mini-lightbox');
 
 MiniLightbox({
-    selector: ".screenshots img"
+    selector: ".desktop-image"
     // the common container where the images are appended
   , delegation: "html"
 });

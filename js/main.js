@@ -200,7 +200,7 @@
 	var MiniLightbox = __webpack_require__(10);
 
 	MiniLightbox({
-	    selector: ".screenshots img"
+	    selector: ".desktop-image"
 	    // the common container where the images are appended
 	    , delegation: "html"
 	});
