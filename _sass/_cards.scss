@@ -21,7 +21,7 @@ figure img {
   backface-visibility: hidden;
 }
 
-figure:hover img {
+.cards li:hover img {
   opacity: 0.2;
 }
 
@@ -54,7 +54,7 @@ figure.card p::after {
 
 }
 
-figure.card:hover p::after {
+.cards li:hover p::after {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
@@ -69,7 +69,7 @@ figure.card p {
   font-size: 68.5%;
 }
 
-figure.card:hover p {
+.cards li:hover p {
     opacity: 1;
     transform: translate3d(0,0,0);
 }

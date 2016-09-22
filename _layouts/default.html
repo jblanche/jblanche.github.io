@@ -40,13 +40,10 @@
           <nav id="nav" role="navigation" class="menu">
             <ul>
               <li>
-                <a title="About Jonathan Blanchet – Web Developer" href="{% if page.title != 'index' %}/{% endif %}#about">About</a>
-              </li>
-              <li>
                 <a title="My portfolio" href="{% if page.title != 'index' %}/{% endif %}#portfolio">Portfolio</a>
               </li>
               <li>
-                <a title="My skills" href="{% if page.title != 'index' %}/{% endif %}#skills">Skills</a>
+                <a title="About me" href="{% if page.title != 'index' %}/{% endif %}#about">About</a>
               </li>
               <li>
                 <a title="Contact me" href="{% if page.title != 'index' %}/{% endif %}#contact">Contact</a>
@@ -55,7 +52,7 @@
           </nav>
         </div>
         {% if page.title == 'index' %}
-        <p id="about">
+        <p class="description">
           Hi,
           I’m a passionated <b>freelance web developer</b> from Paris, France.
           I develop websites and web applications using the web stack and recent tooling.

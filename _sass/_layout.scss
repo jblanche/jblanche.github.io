@@ -44,7 +44,7 @@ h6 {
 
 nav {
   position: absolute;
-  right: 0;
+  right: 100px;
   top: 30px;
 
   li {
@@ -59,7 +59,13 @@ nav {
   box-sizing: border-box;
 }
 
-.skills {
+.wrapper h3, .wrapper p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.about {
   background: #F4F4F4;
 }
 
@@ -91,7 +97,6 @@ header {
   }
 
   p {
-    width: 66%;
     text-align: center;
     font-size: 1.375rem;
     margin: 2rem auto 2rem auto;
@@ -214,6 +219,7 @@ footer {
   ul {
     display: flex;
     margin-left: 0;
+    margin-top: 2rem;
   }
 
   li {
@@ -233,39 +239,38 @@ footer {
   h2 {
     text-align: left;
     font-size: 1.2rem;
-  }
+    border-bottom: 5px solid black;
 
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
-.skills {
+.about {
 
   ul {
-    margin: 0;
+    margin: 2rem auto 0 auto;
+    max-width: 700px;
   }
 
   li {
     list-style-type: none;
-    background: white;
     margin-bottom: 2rem;
-    padding: 1rem;
-    display: flex;
+    position: relative;
   }
 
   h4 {
     color: $brand-color;
     margin-top: 0;
-    flex: 1;
     text-transform: uppercase;
     padding-right: 2rem;
-    line-height: 1.9rem;
-  }
-
-  p {
-    flex: 3;
-  }
-
-  li p {
-    font-size: 1.2rem;
+    line-height: 1.5;
+    font-size: 1.375rem;
+    position: absolute;
+    text-align: right;
+    left: -180px;
+    max-width: 150px;
   }
 }
 
@@ -278,20 +283,25 @@ footer {
   }
 
   p {
-    display: flex;
-    font-size: 1rem;
+    margin: 15px auto;
+    position: relative;
   }
 
   label {
-    flex: 1;
     padding-right: 1rem;
     padding-top: 1rem;
+    position: absolute;
+    width: 150px;
+    left: -180px;
+    text-align: right;
   }
 
-  input, textarea {
-    flex: 2;
-    font-size: 1rem;
+  input[type="text"], textarea {
+    font-size: 1.375rem;
     padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 700px;
   }
 
   textarea {
@@ -316,4 +326,8 @@ footer {
   .screenshots img {
     margin: 1rem;
   }
+}
+
+header p.description {
+  margin: 2rem auto;
 }
