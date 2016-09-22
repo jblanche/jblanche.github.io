@@ -54,6 +54,10 @@
 
 	var _lightbox2 = _interopRequireDefault(_lightbox);
 
+	var _typekit = __webpack_require__(11);
+
+	var _typekit2 = _interopRequireDefault(_typekit);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
@@ -403,6 +407,32 @@
 
 	module.exports = MiniLightbox;
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	(function (d) {
+	  var config = {
+	    kitId: 'uor5qdi',
+	    scriptTimeout: 3000,
+	    async: true
+	  },
+	      h = d.documentElement,
+	      t = setTimeout(function () {
+	    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+	  }, config.scriptTimeout),
+	      tk = d.createElement("script"),
+	      f = false,
+	      s = d.getElementsByTagName("script")[0],
+	      a;h.className += " wf-loading";tk.src = 'https://use.typekit.net/' + config.kitId + '.js';tk.async = true;tk.onload = tk.onreadystatechange = function () {
+	    a = this.readyState;if (f || a && a != "complete" && a != "loaded") return;f = true;clearTimeout(t);try {
+	      Typekit.load(config);
+	    } catch (e) {}
+	  };s.parentNode.insertBefore(tk, s);
+	})(document);
 
 /***/ }
 /******/ ]);
