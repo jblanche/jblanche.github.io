@@ -1,6 +1,5 @@
 var MiniLightbox = require('mini-lightbox');
 
-console.log(MiniLightbox);
 MiniLightbox({
     selector: ".screenshots img"
     // the common container where the images are appended

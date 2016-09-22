@@ -199,7 +199,6 @@
 
 	var MiniLightbox = __webpack_require__(10);
 
-	console.log(MiniLightbox);
 	MiniLightbox({
 	    selector: ".screenshots img"
 	    // the common container where the images are appended
