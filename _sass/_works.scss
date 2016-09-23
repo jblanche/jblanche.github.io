@@ -17,7 +17,6 @@
   h4 {
     color: $brand-color;
     margin-top: 0;
-    text-transform: uppercase;
     padding-right: 2rem;
     line-height: 1.5;
     font-size: 1.375rem;
@@ -39,14 +38,11 @@
     width: calc(100% - 2rem);
   }
 
-  @include media-query($on-tablet) {
-    h4 {
-      position: absolute;
-      text-align: right;
-      left: -180px;
-      width: 150px;
-    }
+  .wrapper p {
+    margin: 1em auto;
+  }
 
+  @include media-query($on-tablet) {
     .screenshots img {
       margin: 1rem;
       float: left;
@@ -54,4 +50,12 @@
     }
   }
 
+  @include media-query($on-desktop) {
+    h4 {
+      position: absolute;
+      text-align: right;
+      left: -180px;
+      width: 150px;
+    }
+  }
 }
