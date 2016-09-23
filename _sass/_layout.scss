@@ -47,6 +47,7 @@ h6 {
 }
 
 nav {
+  display: none;
   ul {
     justify-content: center;
   }
@@ -54,6 +55,12 @@ nav {
   li {
     display: inline-block;
     margin: 1rem;
+  }
+}
+
+@include media-query($on-tablet) {
+  nav {
+    display: block;
   }
 }
 
