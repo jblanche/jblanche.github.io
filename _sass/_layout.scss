@@ -75,8 +75,20 @@ nav {
 
 .wrapper {
   margin: 1rem auto;
-  padding: 30px 100px;
+  padding: 30px;
   box-sizing: border-box;
+}
+
+@include media-query($on-tablet) {
+  .wrapper {
+    padding: 30px 60px;
+  }
+}
+
+@include media-query($on-desktop) {
+  .wrapper {
+    padding: 30px 100px;
+  }
 }
 
 .wrapper h3, .wrapper p {
