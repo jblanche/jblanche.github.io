@@ -1,1 +1,1 @@
-var smoothScroll = require('smoothscroll');
+require('smoothscroll');
