@@ -2,13 +2,17 @@
 set -e
 
 # build JS
+echo '########## Building JS'
 webpack -p
 
 # build site
+echo '########## Building jekyll site'
 JEKYLL_ENV=production bundle exec jekyll build
 
+echo '########## extracting critical css'
 #inline critical CSS on home page
-cat _site/index.html| critical --base _site --inline > _site/index.critical.html
+cat _site/index.html| critical --width=700 --base _site --inline > _site/index.critical.html
 
 # replace html with new one
+echo '########## replacing index.html'
 mv _site/index.critical.html _site/index.html
