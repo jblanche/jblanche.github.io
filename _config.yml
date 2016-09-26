@@ -6,3 +6,4 @@ gems:
   - jekyll-sitemap
 sass:
     style: compressed
+repository: jblanche/jblanche.github.io

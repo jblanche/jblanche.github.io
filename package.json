@@ -23,8 +23,7 @@
     ]
   },
   "scripts": {
-    "build": "babel _js -d js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": ". ./_scripts/publish"
   },
   "repository": {
     "type": "git",

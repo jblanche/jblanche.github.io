@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+# build JS
+webpack -p
+
+# build site
+JEKYLL_ENV=production bundle exec jekyll build
+
+#inline critical CSS on home page
+cat _site/index.html| critical --base _site --inline > _site/index.critical.html
+
+# replace html with new one
+mv _site/index.critical.html _site/index.html
