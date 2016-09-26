@@ -29,7 +29,7 @@
   </head>
 
   <body>
-    <header>
+    <header role="banner">
       <div class="wrapper">
         <div class="heading">
           <div class="name">
@@ -62,20 +62,20 @@
         </p>
         <a href="#portfolio" class="portfolio svg-link">
           <span>portfolio</span>
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="4 22 108 58" style="top: 0px;" xml:space="preserve">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="4 22 108 58">
               <g>
-                <path class="st0" d="M57.9,72.5c-0.8,0-1.5-0.3-2.1-0.9L18.9,34.7c-1.2-1.2-1.2-3.1,0-4.3c1.2-1.2,3.1-1.2,4.3,0l34.8,34.9
-                    l34.9-34.9c1.2-1.2,3.1-1.2,4.3,0c1.2,1.2,1.2,3.1,0,4.3l-37,36.9C59.4,72.2,58.7,72.5,57.9,72.5z" style="fill: rgb(255, 255, 255);"></path>
+                <path d="M57.9,72.5c-0.8,0-1.5-0.3-2.1-0.9L18.9,34.7c-1.2-1.2-1.2-3.1,0-4.3c1.2-1.2,3.1-1.2,4.3,0l34.8,34.9
+                    l34.9-34.9c1.2-1.2,3.1-1.2,4.3,0c1.2,1.2,1.2,3.1,0,4.3l-37,36.9C59.4,72.2,58.7,72.5,57.9,72.5z"></path>
               </g>
           </svg>
         </a>
         {% endif %}
       </div>
     </header>
-    <main class="page-content" aria-label="Content">
+    <main class="page-content" aria-label="Content" role="main">
       {{ content }}
     </main>
-    <footer>
+    <footer role="contentinfo">
       <div class="wrapper">
         <div class="name">
           <a class="homepage" href="/">
