@@ -16,3 +16,7 @@ cat _site/index.html| critical --width=700 --base _site --inline > _site/index.c
 # replace html with new one
 echo '########## replacing index.html'
 mv _site/index.critical.html _site/index.html
+
+# Adding the nojekyll file
+echo '########## touch .nojekyll file'
+touch _site/.nojekyll
