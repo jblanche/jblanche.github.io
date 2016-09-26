@@ -1,3 +1,8 @@
-exclude: [node_modules]
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules
 gems:
   - jekyll-sitemap
+sass:
+    style: compressed
