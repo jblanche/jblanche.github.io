@@ -319,7 +319,7 @@ footer .name {
   text-align: center;
 }
 footer h2 {
-  text-transform: uppercase;
+  text-transform: none;
   margin-top: -0.7rem;
   font-size: 1.3rem;
   opacity: 0.5;
