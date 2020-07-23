@@ -1,0 +1,10 @@
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules
+  - vendor
+gems:
+  - jekyll-sitemap
+sass:
+  style: compressed
+repository: jblanche/jblanche.github.io
